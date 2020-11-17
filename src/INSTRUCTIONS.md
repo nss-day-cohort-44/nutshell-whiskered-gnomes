@@ -2,11 +2,12 @@
 
 ### Wireframe
 
-![](./planning/wireframe-nutshell-gnomes.pdf)
+![Nutshell Wireframe](./planning/wireframe-whiskered-gnomes-nutshell.svg)
 
 ### Dependency Graph
 
-![](./planning/whiskered-gnomes dependency-graph.pdf)
+![Nutshell Dependency Graph](./planning/whiskered-gnomes-dependency-graph.png)
 
 ### ERD
-![](./planning/nutshellERD.pdf)
+
+![Nutshell ERD](./planning/NutShellERD.png)
