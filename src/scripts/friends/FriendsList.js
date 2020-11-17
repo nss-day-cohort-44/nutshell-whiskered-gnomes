@@ -8,19 +8,21 @@ import { friendHTML } from "./FriendHTML.js"
 
 const eventHub = document.querySelector(".container")
 const friendsElement = document.querySelector(".friends")
+const userId = parseInt(sessionStorage.getItem("activeUser"))
 
 
 // Gets all relevant information, parses, then renders to the DOM.
-export const friendsList = currentUserId => {
+export const friendsList = () => {
     // debugger
     if (sessionStorage.activeUser) {
+        debugger
         getFriends()
             .then(getUsers)
             .then(() => {
                 const allRelationships = useFriends()
                 const allUsers = useUsers()
 
-                parsedFriends(currentUserId, allRelationships, allUsers)
+                parsedFriends(userId, allRelationships, allUsers)
             })
     }
 }

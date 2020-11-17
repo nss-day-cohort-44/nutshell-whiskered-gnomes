@@ -23,13 +23,13 @@ export const getFriends = () => {
 
 }
 
-export const addFriend = friendId => {
+export const addFriend = realtionshipObj => {
     return fetch("http://localhost:8088/friends", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(friendId)
+        body: JSON.stringify(realtionshipObj)
     })
         .then(getFriends)
         .then(friendChangeEvent)

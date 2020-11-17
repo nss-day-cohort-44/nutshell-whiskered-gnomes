@@ -5,9 +5,11 @@
 const eventHub = document.querySelector(".container")
 const friendElement = document.querySelector(".friends")
 
+
+// Responds to Add Friend button and renders form; also un-renders if form is present.
 eventHub.addEventListener("add_Friend", () => {
-    console.log(friendElement.childNodes.length)
-    console.log(friendElement.childNodes)
+    // console.log(friendElement.childNodes.length)
+    // console.log(friendElement.childNodes)
     // debugger
     if (friendElement.childNodes.length <= 4 ) {
         friendElement.innerHTML += `
@@ -24,9 +26,11 @@ eventHub.addEventListener("add_Friend", () => {
 })
 
 
+// Dispatches userId from input form
 eventHub.addEventListener("click", saveClick => {
     if (saveClick.target.id === "saveFriend") {
-        let friendToSave = document.querySelector(".addFriend__text").textContent
+        // debugger
+        let friendToSave = document.querySelector("#addFriend__text").value
         const saveEvent = new CustomEvent("addSavedFriend", {
             detail: {
                 friendUsername: friendToSave

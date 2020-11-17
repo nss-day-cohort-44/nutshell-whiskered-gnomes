@@ -5,7 +5,6 @@ import { friendsList } from "./friends/FriendsList.js"
 import "./tasks/TaskForm.js"
 
 // UserId is passed to all List Functions
-const userId = parseInt(sessionStorage.getItem("activeUser"))
 
 
 
@@ -17,7 +16,7 @@ export const Nutshell = () => {
         renderTaskButton()
         getTasks()
         useTasks()
-        friendsList(userId)
+        friendsList()
     } else {
         console.log("No User")
     } 
