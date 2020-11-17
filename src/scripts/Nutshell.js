@@ -14,4 +14,8 @@ export const Nutshell = () => {
     //TaskForm()
 }
 
+const eventHub = document.querySelector(".container")
+eventHub.addEventListener("userAuthenticated", e => {   
+    Nutshell()
+})
 
