@@ -11,6 +11,7 @@ export const renderTaskButton = () => {
     `
 }
 
+//when you click Add Task button
 eventHub.addEventListener("click", (clickEvent) => {
   if (clickEvent.target.id === "create-task-button") {
 
