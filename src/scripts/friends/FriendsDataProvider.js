@@ -17,26 +17,26 @@ export const useFriends = () => friends.slice()
 
 
 export const getFriends = () => {
-    return fetch("http://localhost:5000/friends")
+    return fetch("http://localhost:8088/friends")
         .then(taco => taco.json())
         .then(taco => friends = taco)
 
 }
 
-export const saveFriend = friendId => {
-    return fetch("http://localhost:5000/friends", {
+export const addFriend = friendId => {
+    return fetch("http://localhost:8088/friends", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify(friend)
+        body: JSON.stringify(friendId)
     })
         .then(getFriends)
         .then(friendChangeEvent)
 }
 
-export const deleteFriend = friendId => {
-    return fetch(`http://localhost:5000/friends/friends/${friendId}`, {
+export const deleteFriend = relationship => {
+    return fetch(`http://localhost:8088/friends/friends/${relationship.id}`, {
         method: "DELETE"
     })
         .then(getFriends)
