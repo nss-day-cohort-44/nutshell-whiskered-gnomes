@@ -12,7 +12,6 @@ export const renderEventsButton = () => {
 
 eventHub.addEventListener("click", (clickEvent) => {
     if (clickEvent.target.id === "add-event-button") {
-
     const eventButtonClicked = new CustomEvent("eventButtonClicked")
     console.log(eventButtonClicked, "event button clicked")
     eventHub.dispatchEvent(eventButtonClicked)

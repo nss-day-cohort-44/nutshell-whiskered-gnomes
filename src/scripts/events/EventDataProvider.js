@@ -1,5 +1,10 @@
-// Author: Danny- create a component reponsible for getting events data from local API for upcoming events 
+// Author: Danny- create a component reponsible for getting events data from local API for upcoming events
 let events = [];
+
+const dispatchStateChangeEvent = () => {
+    const eventStateChangedEvent = new CustomEvent("eventStateChanged");
+    eventHub.dispatchEvent(eventStateChangedEvent);
+};
 
 export const useEvents = () => {
     return events.slice();
@@ -12,4 +17,22 @@ export const getEvents = () => {
         console.log(parsedEvents)
         events = parsedEvents;
     });
+};
+
+export const saveEvent = (event) => {
+    return fetch("http://localhost:8088/events", {
+    method: "POST",
+    headers: {
+        "Content-Type": "application/json",
+    },
+    body: JSON.stringify(event),
+    })
+    .then(getEvents)
+    .then(dispatchStateChangeEvent);
+};
+
+export const deleteEvent = (eventId) => {
+    return fetch(`http://localhost:8088/events/${eventId}`, {
+    method: "DELETE",
+    }).then(getEvents);
 };
