@@ -10,4 +10,4 @@
 
 ### ERD
 
-![Nutshell ERD](./planning/NutShellERD.png)
+![Nutshell ERD](./planning/nutshellERD.png)
