@@ -11,7 +11,7 @@ eventHub.addEventListener("add_Friend", () => {
     // console.log(friendElement.childNodes.length)
     // console.log(friendElement.childNodes)
     // debugger
-    if (friendElement.childNodes.length <= 4 ) {
+    if (friendElement.childNodes.length <= 4) {
         friendElement.innerHTML += `
         <div class="addFriend__form">
             <input type="text" id="addFriend__text" placeholder="Enter username here... "></input>
@@ -19,9 +19,9 @@ eventHub.addEventListener("add_Friend", () => {
         </div>
         `
 
-    } else if (friendElement.childNodes.length > 4){
+    } else if (friendElement.childNodes.length > 4) {
         const friendFormElement = document.querySelector(".addFriend__form")
-        friendFormElement.parentNode.removeChild(friendFormElement) 
+        friendFormElement.parentNode.removeChild(friendFormElement)
     }
 })
 

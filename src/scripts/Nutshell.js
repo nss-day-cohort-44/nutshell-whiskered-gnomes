@@ -1,6 +1,6 @@
 
-import {renderTaskButton} from "./tasks/DisplayTaskButton.js"
-import {getTasks, useTasks} from "./tasks/TaskDataProvider.js"
+import { renderTaskButton } from "./tasks/DisplayTaskButton.js"
+import { getTasks, useTasks } from "./tasks/TaskDataProvider.js"
 import { friendsList } from "./friends/FriendsList.js"
 import "./tasks/TaskForm.js"
 
@@ -19,11 +19,11 @@ export const Nutshell = () => {
         friendsList()
     } else {
         console.log("No User")
-    } 
+    }
 }
 
 const eventHub = document.querySelector(".container")
-eventHub.addEventListener("userAuthenticated", e => {   
+eventHub.addEventListener("userAuthenticated", e => {
     Nutshell()
 })
 

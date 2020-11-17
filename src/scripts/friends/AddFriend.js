@@ -7,7 +7,6 @@ import { friendsList } from "./FriendsList.js"
 
 
 const eventHub = document.querySelector(".container")
-const userId = parseInt(sessionStorage.getItem("activeUser"))
 
 
 // Takes the dispatched friend username and is used to find the corresponding user;
@@ -16,13 +15,14 @@ const userId = parseInt(sessionStorage.getItem("activeUser"))
 // IF the found user does not exist, alert is given "User not found".
 eventHub.addEventListener("addSavedFriend", friendObj => {
     // debugger
+    const userId = parseInt(sessionStorage.getItem("activeUser"))
     const allUsers = useUsers()
-    const user = allUsers.find(user => user.username === friendObj.detail.friendUsername)
+    const followeeId = allUsers.find(user => user.username === friendObj.detail.friendUsername)
 
-    if (user) {
+    if (followeeId) {
         const newRelationship = {
             userId,
-            followeeId: user.id
+            followeeId: followeeId.id
         }
 
         addFriend(newRelationship)

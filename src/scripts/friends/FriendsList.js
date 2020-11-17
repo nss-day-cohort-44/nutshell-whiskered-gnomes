@@ -8,13 +8,13 @@ import { friendHTML } from "./FriendHTML.js"
 
 const eventHub = document.querySelector(".container")
 const friendsElement = document.querySelector(".friends")
-// Retrieves current user's ID
-const userId = parseInt(sessionStorage.getItem("activeUser"))
 
 
 // Gets all relevant information, parses, then renders to the DOM.
 export const friendsList = () => {
     // debugger
+    // Retrieves current user's ID
+    const userId = parseInt(sessionStorage.getItem("activeUser"))
     if (sessionStorage.activeUser) {
         debugger
         getFriends()
