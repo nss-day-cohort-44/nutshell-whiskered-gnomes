@@ -1,6 +1,5 @@
 
 import { getTasks, useTasks } from "./tasks/TaskDataProvider.js"
-import { renderTaskButton } from "./tasks/DisplayTaskButton.js"
 import { renderEventsButton } from "./events/AddEvent.js"
 import { friendsList } from "./friends/FriendsList.js"
 import { TaskListComponent } from "./tasks/TaskList.js"
