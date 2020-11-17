@@ -17,7 +17,7 @@ eventHub.addEventListener("addSavedFriend", friendObj => {
     // debugger
     const userId = parseInt(sessionStorage.getItem("activeUser"))
     const allUsers = useUsers()
-    const followeeId = allUsers.find(user => user.username === friendObj.detail.friendUsername)
+    const followeeId = allUsers.find(friend => friend.username === friendObj.detail.friendUsername)
 
     if (followeeId) {
         const newRelationship = {
