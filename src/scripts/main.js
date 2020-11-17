@@ -1,5 +1,7 @@
 import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
+import { getMessages, useMessages } from "./messages/MessageDataProvider.js"
+import { MessageList } from "./messages/MessageList.js"
 import { Nutshell } from "./Nutshell.js"
 
 
@@ -19,3 +21,7 @@ if (sessionStorage.activeUser) {
     RegisterForm()
     LoginForm()
 }
+
+// getMessages()
+//     .then(useMessages)
+MessageList()
