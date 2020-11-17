@@ -1,3 +1,4 @@
+import { EventForm } from "./events/EventForm.js"
 import {renderTaskButton} from "./tasks/DisplayTaskButton.js"
 import {getTasks, useTasks} from "./tasks/TaskDataProvider.js"
 import "./tasks/TaskForm.js"
@@ -12,6 +13,7 @@ export const Nutshell = () => {
     getTasks()
     useTasks()
     //TaskForm()
+    EventForm()
 }
 
 

@@ -1,6 +1,5 @@
 import { LoginForm } from "./auth/LoginForm.js"
 import { RegisterForm } from "./auth/RegisterForm.js"
-import { getEvents } from "./events/EventDataProvider.js"
 import { Nutshell } from "./Nutshell.js"
 
 
