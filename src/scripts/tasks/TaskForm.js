@@ -1,22 +1,32 @@
 //J.Kaset - This module is responsible for rendering the form. Also creates click event for saving tasks.
 
-const contentTarget = document.querySelector(".tasks")
 const eventHub = document.querySelector(".container")
+const taskContainer = document.querySelector(".tasks")
 
 
-export const renderTaskButton = () => {
+// listens for click event dispatched in DisplayTaskButton.js
+eventHub.addEventListener("taskButtonClicked", () => {
+  console.log("heard")
+  renderForm()
+})
 
-  contentTarget.innerHTML = `
-    <button id="create-task-button">Create a Task</button>
-    `
+const renderForm = () => {
+  taskContainer.innerHTML = `
+  <form class="taskForm">
+  <input id="taskForm--title" type="text" placeholder="Task Name" required/>
+  <label for="taskForm--date">Completion date:</label>
+  <input id="taskForm--date" type="date" required/>
+  <button id="saveTask" type="button">Save task</button>
+  </form>
+  `
 }
 
+//create click event for Save button on form
 eventHub.addEventListener("click", (clickEvent) => {
-  if (clickEvent.target.id === "create-task-button") {
+  if (clickEvent.target.id === "saveTask") {
 
-    const facilityButtonClicked = new CustomEvent("taskButtonClicked")
-
-    eventHub.dispatchEvent(taskButtonClicked)
-
+    const saveButtonClicked = new CustomEvent("saveButtonClicked")
+    console.log(saveButtonClicked, "save button clicked")
+    eventHub.dispatchEvent(saveButtonClicked)
   }
 })
