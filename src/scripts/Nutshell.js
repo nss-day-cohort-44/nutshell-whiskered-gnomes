@@ -1,22 +1,23 @@
 
-import { renderTaskButton } from "./tasks/DisplayTaskButton.js"
 import { getTasks, useTasks } from "./tasks/TaskDataProvider.js"
+import { renderTaskButton } from "./tasks/DisplayTaskButton.js"
+import { renderEventsButton } from "./events/AddEvent.js"
 import { friendsList } from "./friends/FriendsList.js"
+import { EventList } from "./events/EventList.js"
+import "./events/EventForm.js"
 import "./tasks/TaskForm.js"
-
-// UserId is passed to all List Functions
-
 
 
 export const Nutshell = () => {
     if (sessionStorage.activeUser) {
         // Render all your UI components here
-        // const contentTarget = document.querySelector(".dashboard")
-        // contentTarget.innerHTML = `<h1>Sometimes you feel like a nut</h1>`
+
+        renderEventsButton()
         renderTaskButton()
+        friendsList()
+        EventList()
         getTasks()
         useTasks()
-        friendsList()
     } else {
         console.log("No User")
     }

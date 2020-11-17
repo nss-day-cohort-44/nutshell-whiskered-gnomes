@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1529" height="906" viewBox="0 0 1529 906">
+  <defs>
+    <clipPath id="clip-Artboard_1">
+      <rect width="1529" height="906"/>
+    </clipPath>
+  </defs>
+  <g id="Artboard_1" data-name="Artboard – 1" clip-path="url(#clip-Artboard_1)">
+    <rect width="1529" height="906" fill="#fff"/>
+    <g id="Rectangle_1" data-name="Rectangle 1" transform="translate(211 201)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="1093" height="639" stroke="none"/>
+      <rect x="0.5" y="0.5" width="1092" height="638" fill="none"/>
+    </g>
+    <text id="_container" data-name="#container" transform="translate(220 195)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">#container</tspan></text>
+    <g id="Rectangle_2" data-name="Rectangle 2" transform="translate(997 232)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="293" height="255" stroke="none"/>
+      <rect x="0.5" y="0.5" width="292" height="254" fill="none"/>
+    </g>
+    <text id="_.friends" data-name=".friends" transform="translate(1005 228)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">.friends</tspan></text>
+    <g id="Rectangle_3" data-name="Rectangle 3" transform="translate(997 516)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="293" height="310" stroke="none"/>
+      <rect x="0.5" y="0.5" width="292" height="309" fill="none"/>
+    </g>
+    <text id="_.messages" data-name=".messages" transform="translate(1005 510)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">.messages</tspan></text>
+    <g id="Rectangle_4" data-name="Rectangle 4" transform="translate(227 232)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="297" height="238" stroke="none"/>
+      <rect x="0.5" y="0.5" width="296" height="237" fill="none"/>
+    </g>
+    <text id="_.tasks" data-name=".tasks" transform="translate(227 228)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">.tasks</tspan></text>
+    <g id="Rectangle_5" data-name="Rectangle 5" transform="translate(533 232)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="444" height="255" stroke="none"/>
+      <rect x="0.5" y="0.5" width="443" height="254" fill="none"/>
+    </g>
+    <text id="_.news" data-name=".news" transform="translate(539 223)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">.news</tspan></text>
+    <g id="Rectangle_6" data-name="Rectangle 6" transform="translate(533 516)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="444" height="310" stroke="none"/>
+      <rect x="0.5" y="0.5" width="443" height="309" fill="none"/>
+    </g>
+    <text id="_.events" data-name=".events" transform="translate(533 511)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">.events</tspan></text>
+    <g id="Rectangle_7" data-name="Rectangle 7" transform="translate(209 25)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="1093" height="149" stroke="none"/>
+      <rect x="0.5" y="0.5" width="1092" height="148" fill="none"/>
+    </g>
+    <text id="Header" transform="translate(215 19)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Header</tspan></text>
+    <g id="Rectangle_8" data-name="Rectangle 8" transform="translate(836 37)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="444" height="125" stroke="none"/>
+      <rect x="0.5" y="0.5" width="443" height="124" fill="none"/>
+    </g>
+    <text id="Login_" data-name="Login?" transform="translate(846 61)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Login?</tspan></text>
+    <g id="Ellipse_1" data-name="Ellipse 1" transform="translate(228 40)" fill="#fff" stroke="#707070" stroke-width="1">
+      <circle cx="60" cy="60" r="60" stroke="none"/>
+      <circle cx="60" cy="60" r="59.5" fill="none"/>
+    </g>
+    <text id="logo" transform="translate(269 105)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">logo</tspan></text>
+    <g id="Rectangle_9" data-name="Rectangle 9" transform="translate(541 558)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="422" height="104" stroke="none"/>
+      <rect x="0.5" y="0.5" width="421" height="103" fill="none"/>
+    </g>
+    <text id="User_Name_of_Event_Date_Location_" data-name="User
+Name of Event
+Date
+Location
+" transform="translate(551 583)" fill="#707070" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">User</tspan><tspan x="0" y="18">Name of Event</tspan><tspan x="0" y="36">Date</tspan><tspan x="0" y="54">Location</tspan><tspan x="0" y="72"></tspan></text>
+    <text id="_.event__card" data-name=".event__card" transform="translate(547 546)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">.event__card</tspan></text>
+    <g id="Rectangle_10" data-name="Rectangle 10" transform="translate(241 261)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="281" height="133" stroke="none"/>
+      <rect x="0.5" y="0.5" width="280" height="132" fill="none"/>
+    </g>
+    <text id="_.task__card" data-name=".task__card" transform="translate(247 255)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">.task__card</tspan></text>
+    <g id="Group_7" data-name="Group 7" transform="translate(158.637 92.078)">
+      <g id="Rectangle_11" data-name="Rectangle 11" transform="translate(147.363 342.922)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="1">
+        <rect width="139" height="27" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="138" height="26" rx="2.5" fill="none"/>
+      </g>
+      <text id="Create_new_task" data-name="Create new task" transform="translate(213.363 359.922)" fill="#707070" font-size="15" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-54.308" y="0">Create new task</tspan></text>
+    </g>
+    <text id="Name_Date_of_exp_completion_Display:_none_when_checked_" data-name="Name
+Date of exp completion
+(Display: “none” when checked)
+" transform="translate(280 295)" fill="#707070" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Name</tspan><tspan x="0" y="18">Date of exp completion</tspan><tspan x="0" y="36">(Display: “none” when checked)</tspan><tspan x="0" y="54"></tspan></text>
+    <g id="Rectangle_12" data-name="Rectangle 12" transform="translate(249 276)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="21" height="21" stroke="none"/>
+      <rect x="0.5" y="0.5" width="20" height="20" fill="none"/>
+    </g>
+    <g id="Rectangle_13" data-name="Rectangle 13" transform="translate(1005 270)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="275" height="100" stroke="none"/>
+      <rect x="0.5" y="0.5" width="274" height="99" fill="none"/>
+    </g>
+    <text id="_.friend__card" data-name=".friend__card" transform="translate(1005 257)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">.friend__card</tspan></text>
+    <g id="Group_1" data-name="Group 1" transform="translate(151.059 90)">
+      <g id="Rectangle_14" data-name="Rectangle 14" transform="translate(926.941 359)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="1">
+        <rect width="145" height="28" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="144" height="27" rx="2.5" fill="none"/>
+      </g>
+      <text id="Add_New_Friend" data-name="Add New Friend" transform="translate(997.941 377)" fill="#707070" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-57.776" y="0">Add New Friend</tspan></text>
+    </g>
+    <line id="Line_1" data-name="Line 1" y1="43" x2="120" transform="translate(1257.5 418.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    <g id="Rectangle_15" data-name="Rectangle 15" transform="translate(1388 363)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="127" height="91" stroke="none"/>
+      <rect x="0.5" y="0.5" width="126" height="90" fill="none"/>
+    </g>
+    <text id="Input_field_" data-name="Input field 
+" transform="translate(1400 394)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Input field </tspan><tspan x="0" y="24"></tspan></text>
+    <g id="Group_2" data-name="Group 2" transform="translate(164.781 91)">
+      <g id="Rectangle_14-2" data-name="Rectangle 14" transform="translate(1033.219 244)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="1">
+        <rect width="74" height="25" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="73" height="24" rx="2.5" fill="none"/>
+      </g>
+      <text id="Delete" transform="translate(1069.219 261)" fill="#707070" font-size="15" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-21.39" y="0">Delete</tspan></text>
+    </g>
+    <text id="User_name_Following_of_ppl_" data-name="User name
+Following (# of ppl)" transform="translate(1015 290)" fill="#707070" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">User name</tspan><tspan x="0" y="18">Following (# of ppl)</tspan></text>
+    <g id="Group_12" data-name="Group 12" transform="translate(-70 88)">
+      <g id="Rectangle_16" data-name="Rectangle 16" transform="translate(1470 325)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="1">
+        <rect width="95" height="32" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="94" height="31" rx="2.5" fill="none"/>
+      </g>
+      <text id="Save" transform="translate(1518 348)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-22.22" y="0">Save</tspan></text>
+    </g>
+    <line id="Line_2" data-name="Line 2" x1="115" y2="18" transform="translate(173.5 454.5)" fill="none" stroke="#707070" stroke-width="1"/>
+    <g id="Rectangle_17" data-name="Rectangle 17" transform="translate(9 416)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="146" height="109" stroke="none"/>
+      <rect x="0.5" y="0.5" width="145" height="108" fill="none"/>
+    </g>
+    <text id="Form" transform="translate(36 448)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Form</tspan></text>
+    <g id="Group_3" data-name="Group 3" transform="translate(-597.188 121)">
+      <g id="Rectangle_14-3" data-name="Rectangle 14" transform="translate(1033.188 244)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="1">
+        <rect width="77" height="26" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="76" height="25" rx="2.5" fill="none"/>
+      </g>
+      <text id="Delete-2" data-name="Delete" transform="translate(1071.188 262)" fill="#707070" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-22.816" y="0">Delete</tspan></text>
+    </g>
+    <g id="Group_4" data-name="Group 4" transform="translate(-1418 77)">
+      <g id="Rectangle_18" data-name="Rectangle 18" transform="translate(1454 403)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="1">
+        <rect width="95" height="32" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="94" height="31" rx="2.5" fill="none"/>
+      </g>
+      <text id="Save-2" data-name="Save" transform="translate(1502 426)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-22.22" y="0">Save</tspan></text>
+    </g>
+    <g id="Group_5" data-name="Group 5" transform="translate(-156.5 385.895)">
+      <g id="Rectangle_14-4" data-name="Rectangle 14" transform="translate(1033.5 244.105)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="1">
+        <rect width="77" height="26" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="76" height="25" rx="2.5" fill="none"/>
+      </g>
+      <text id="Delete-3" data-name="Delete" transform="translate(1071.5 262.105)" fill="#707070" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-22.816" y="0">Delete</tspan></text>
+    </g>
+    <g id="Rectangle_19" data-name="Rectangle 19" transform="translate(541 261)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="422" height="104" stroke="none"/>
+      <rect x="0.5" y="0.5" width="421" height="103" fill="none"/>
+    </g>
+    <text id="User_News_title_Synopsis_URL_" data-name="User
+News title
+Synopsis
+URL
+" transform="translate(551 286)" fill="#707070" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">User</tspan><tspan x="0" y="18">News title</tspan><tspan x="0" y="36">Synopsis</tspan><tspan x="0" y="54">URL</tspan><tspan x="0" y="72"></tspan></text>
+    <g id="Group_6" data-name="Group 6" transform="translate(-148.821 91.481)">
+      <g id="Rectangle_14-5" data-name="Rectangle 14" transform="translate(1032.821 243.519)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="1">
+        <rect width="70" height="24" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="69" height="23" rx="2.5" fill="none"/>
+      </g>
+      <text id="Delete-4" data-name="Delete" transform="translate(1067.821 260.519)" fill="#707070" font-size="15" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-21.39" y="0">Delete</tspan></text>
+    </g>
+    <text id="_.news__card" data-name=".news__card" transform="translate(541 252)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">.news__card</tspan></text>
+    <g id="Group_8" data-name="Group 8" transform="translate(559.637 439.078)">
+      <g id="Rectangle_11-2" data-name="Rectangle 11" transform="translate(147.363 342.922)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="1">
+        <rect width="139" height="27" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="138" height="26" rx="2.5" fill="none"/>
+      </g>
+      <text id="Create_new_event" data-name="Create new event" transform="translate(213.363 359.922)" fill="#707070" font-size="15" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-58.612" y="0">Create new event</tspan></text>
+      <text id="Create_new_event-2" data-name="Create new event" transform="translate(213.363 359.922)" fill="#707070" font-size="15" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-58.612" y="0">Create new event</tspan></text>
+    </g>
+    <g id="Group_9" data-name="Group 9" transform="translate(559.637 106.078)">
+      <g id="Rectangle_11-3" data-name="Rectangle 11" transform="translate(147.363 342.922)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="1">
+        <rect width="139" height="27" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="138" height="26" rx="2.5" fill="none"/>
+      </g>
+      <text id="Create_new_item" data-name="Create new item" transform="translate(213.363 359.922)" fill="#707070" font-size="15" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-54.728" y="0">Create new item</tspan></text>
+    </g>
+    <g id="Rectangle_11-4" data-name="Rectangle 11" transform="translate(1090 786)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="1">
+      <rect width="139" height="27" rx="3" stroke="none"/>
+      <rect x="0.5" y="0.5" width="138" height="26" rx="2.5" fill="none"/>
+    </g>
+    <text id="New_message" data-name="New message" transform="translate(1156 803)" fill="#707070" font-size="15" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-47.498" y="0">New message</tspan></text>
+    <g id="Rectangle_20" data-name="Rectangle 20" transform="translate(1004 548)" fill="#fff" stroke="#707070" stroke-width="1">
+      <rect width="267" height="84" stroke="none"/>
+      <rect x="0.5" y="0.5" width="266" height="83" fill="none"/>
+    </g>
+    <text id="_.message__card" data-name=".message__card" transform="translate(1006 535)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">.message__card</tspan></text>
+    <g id="Group_11" data-name="Group 11" transform="translate(164.781 354)">
+      <g id="Rectangle_14-6" data-name="Rectangle 14" transform="translate(1033.219 244)" fill="#fff" stroke="#707070" stroke-linejoin="round" stroke-width="1">
+        <rect width="74" height="25" rx="3" stroke="none"/>
+        <rect x="0.5" y="0.5" width="73" height="24" rx="2.5" fill="none"/>
+      </g>
+      <text id="Delete-5" data-name="Delete" transform="translate(1069.219 261)" fill="#707070" font-size="15" font-family="HelveticaNeue, Helvetica Neue"><tspan x="-21.39" y="0">Delete</tspan></text>
+    </g>
+    <text id="User_Message" data-name="User
+Message" transform="translate(1018 572)" fill="#707070" font-size="20" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">User</tspan><tspan x="0" y="24">Message</tspan></text>
+    <text id="Messages_display_in_ascending_order" data-name="Messages display in ascending order" transform="translate(1011 754)" fill="#707070" font-size="16" font-family="HelveticaNeue, Helvetica Neue"><tspan x="0" y="0">Messages display in ascending order</tspan></text>
+  </g>
+</svg>
