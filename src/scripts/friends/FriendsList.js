@@ -8,6 +8,7 @@ import { friendHTML } from "./FriendHTML.js"
 
 const eventHub = document.querySelector(".container")
 const friendsElement = document.querySelector(".friends")
+// Retrieves current user's ID
 const userId = parseInt(sessionStorage.getItem("activeUser"))
 
 
@@ -42,6 +43,7 @@ const parsedFriends = (currentUser, allRelationships, allUsers) => {
 
 
 // Creates a friend list box with an 'Add Friend' button and .maps the array of friends through an HTML function.
+// IF no friends are present, will print "Wow, such empty... " to the friends list.
 const render = (parsedFriendsArray) => {
     if (parsedFriendsArray.length > 0) {
         friendsElement.innerHTML = `

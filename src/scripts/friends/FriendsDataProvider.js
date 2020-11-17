@@ -15,7 +15,7 @@ let friends = []
 
 export const useFriends = () => friends.slice()
 
-
+// Gets All relationships
 export const getFriends = () => {
     return fetch("http://localhost:8088/friends")
         .then(taco => taco.json())
@@ -23,6 +23,7 @@ export const getFriends = () => {
 
 }
 
+// Post a new relationship
 export const addFriend = realtionshipObj => {
     return fetch("http://localhost:8088/friends", {
         method: "POST",
@@ -35,6 +36,7 @@ export const addFriend = realtionshipObj => {
         .then(friendChangeEvent)
 }
 
+// Not completed...
 export const deleteFriend = relationship => {
     return fetch(`http://localhost:8088/friends/friends/${relationship.id}`, {
         method: "DELETE"
