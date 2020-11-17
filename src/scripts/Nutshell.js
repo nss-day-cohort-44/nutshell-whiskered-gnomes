@@ -23,5 +23,9 @@ export const Nutshell = () => {
     } 
 }
 
+const eventHub = document.querySelector(".container")
+eventHub.addEventListener("userAuthenticated", e => {   
+    Nutshell()
+})
 
 

@@ -15,7 +15,7 @@ ensure that the Nutshell component gets rendered
 
 
 // Conditional statement that checks if there is an activeUser property in session storage.
-sessionStorage.setItem("userId", 1)
+//sessionStorage.setItem("userId", 1)
 if (sessionStorage.activeUser) {
     Nutshell()
 } else {

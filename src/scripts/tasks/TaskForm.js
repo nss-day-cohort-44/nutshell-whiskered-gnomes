@@ -22,11 +22,11 @@ const renderForm = () => {
 }
 
 //create click event for Save button on form
-eventHub.addEventListener("click", (clickEvent) => {
-  if (clickEvent.target.id === "saveTask") {
-
-    const saveButtonClicked = new CustomEvent("saveButtonClicked")
-    console.log(saveButtonClicked, "save button clicked")
-    eventHub.dispatchEvent(saveButtonClicked)
-  }
-})
+// eventHub.addEventListener("click", (clickEvent) => {
+//   if (clickEvent.target.id === "saveTask") {
+//     const task = document.querySelector(#taskForm--title).value
+//     const date = document.querySelector(#taskForm--date).value
+//     const completed = document.querySelector().value
+    
+//   }
+// })
