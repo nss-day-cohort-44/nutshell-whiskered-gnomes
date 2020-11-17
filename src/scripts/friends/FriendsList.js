@@ -16,7 +16,7 @@ export const friendsList = () => {
     // Retrieves current user's ID
     const userId = parseInt(sessionStorage.getItem("activeUser"))
     if (sessionStorage.activeUser) {
-        debugger
+        // debugger
         getFriends()
             .then(getUsers)
             .then(() => {
