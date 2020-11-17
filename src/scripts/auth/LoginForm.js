@@ -1,4 +1,3 @@
-import { Nutshell } from "../Nutshell.js"
 
 const contentTarget = document.querySelector(".auth--login")
 const eventHub = document.querySelector(".container")
