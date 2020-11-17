@@ -1,8 +1,10 @@
+import { renderEventsButton } from "./events/AddEvent.js"
 import {renderTaskButton} from "./tasks/AddTask.js"
-//import {renderTaskForm} from "./tasks/TaskForm.js"
 import {getTasks, useTasks} from "./tasks/TaskDataProvider.js"
 import "./tasks/TaskForm.js"
-import { TaskListComponent } from "./tasks/TaskList.js"
+import "./events/EventForm.js"
+import { EventList } from "./events/EventList.js"
+import {TaskListComponent} from "./tasks/TaskList.js"
 
 export const Nutshell = () => {
     // Render all your UI components here
@@ -16,6 +18,11 @@ export const Nutshell = () => {
     useTasks()
     TaskListComponent()
     
+    //TaskForm()
+    
+    renderEventsButton()
+    EventList()
+    // EventForm()
 }
 
 
@@ -24,4 +31,3 @@ const eventHub = document.querySelector(".container")
 eventHub.addEventListener("userAuthenticated", e => {   
     Nutshell()
 })
-

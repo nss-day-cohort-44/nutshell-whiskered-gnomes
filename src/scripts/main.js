@@ -20,8 +20,3 @@ if (sessionStorage.activeUser) {
     RegisterForm()
     LoginForm()
 }
-
-// if sessionStorage.getItem("userId") {
-
-// }
-
