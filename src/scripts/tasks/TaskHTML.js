@@ -2,11 +2,12 @@
 
 export const Task = (taskObj) => {
   return `
-  <div class="task--card">
-    <h5>${taskObj.task}</h5>
+    <div class="task--card" id="userId--${taskObj.userId}">
+    <h3>${taskObj.task}</h3>
     <p>Expected Completion: ${taskObj.completeDate}</p>
-    <input type="radio" id="other" name="gender" value="other">
-    <label for="other">Other</label>
-    
+    <input type="radio" id="task--complete" name="completed" value="completed" />
+    <label for="completed">Select when completed</label>
+    <button id="task--delete">Delete</button>
+  </div>
   `
 }
