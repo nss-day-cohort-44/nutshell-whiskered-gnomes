@@ -4,11 +4,10 @@
 
 const eventHub = document.querySelector(".container")
 const friendElement = document.querySelector(".friends")
-const friendFormElement = document.querySelector(".addFriend__form")
 
 eventHub.addEventListener("add_Friend", () => {
     console.log(friendElement.childNodes.length)
-    debugger
+    // debugger
     if (friendElement.childNodes.length < 4 ) {
         friendElement.innerHTML += `
         <div class="addFriend__form">
@@ -18,7 +17,8 @@ eventHub.addEventListener("add_Friend", () => {
         `
 
     } else if (friendElement.childNodes.length > 3){
-        friendElement.parentNode.removeChild(friendFormElement) 
+        const friendFormElement = document.querySelector(".addFriend__form")
+        friendFormElement.parentNode.removeChild(friendFormElement) 
     }
 })
 
