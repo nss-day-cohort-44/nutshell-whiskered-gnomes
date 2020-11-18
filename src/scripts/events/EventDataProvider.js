@@ -15,7 +15,7 @@ export const useEvents = () => {
 };
 
 export const getEvents = () => {
-    return fetch("http://localhost:8088/events?_expand=user")
+    return fetch(`http://localhost:8088/events?${allFriendsURL()}&_expand=user`)
     .then((response) => response.json())
     .then((parsedEvents) => {
         // console.log(parsedEvents)
