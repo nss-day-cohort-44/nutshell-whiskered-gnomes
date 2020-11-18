@@ -1,9 +1,11 @@
 import { MessageList } from "./messages/MessageList.js"
 import { MessageForm } from "./messages/MessageForm.js"
+import { getFriends } from "./friends/FriendsDataProvider.js"
 import { getTasks, useTasks } from "./tasks/TaskDataProvider.js"
 import { renderEventsButton } from "./events/AddEvent.js"
-import { friendsList } from "./friends/FriendsList.js"
+import { MessageList } from "./messages/MessageList.js"
 import { TaskListComponent } from "./tasks/TaskList.js"
+import { friendsList } from "./friends/FriendsList.js"
 import { renderTaskButton } from "./tasks/AddTask.js"
 import { EventList } from "./events/EventList.js"
 import "./friends/DeleteFriend.js"
@@ -13,19 +15,21 @@ import "./friends/FriendForm.js"
 import "./friends/AddFriend.js"
 
 
-export const Nutshell = () => {
-    if (sessionStorage.activeUser) {
-        // Render all your UI components here
 
+export const Nutshell = () => {
+    // Render all your UI components here
+    if (sessionStorage.activeUser) {
         renderEventsButton()
         TaskListComponent()
         renderTaskButton()
-        friendsList()
-        EventList()
         getTasks()
         useTasks()
         MessageList()
         MessageForm()
+        getFriends()
+            .then(friendsList)
+            .then(EventList)
+
     } else {
         console.log("No User")
     }
@@ -37,5 +41,4 @@ const eventHub = document.querySelector(".container")
 eventHub.addEventListener("userAuthenticated", e => {
     Nutshell()
 })
-
 
