@@ -18,6 +18,7 @@ export const EventList = () => {
 
 const render = (eventsArray) => {
     let eventsHTMLRepresentation = "";
+    eventsArray[0].upcomingEvent = true;
     for (const event of eventsArray) {
         eventsHTMLRepresentation += eventHTML(event);
     }
