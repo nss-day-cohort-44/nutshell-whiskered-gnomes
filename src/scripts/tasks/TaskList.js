@@ -55,8 +55,15 @@ eventHub.addEventListener("click", e => {
 
 //EVENT FOR CLICKING COMPLETED IN RADIO BUTTON
 eventHub.addEventListener("click", e => {
-  if (e.target.id === "completeTask") {
-    console.log( e.target.id, "youclicked it")
-    //completeTask()
+  if (e.target.id.startsWith("completeTask--")) {
+    const [prefix, id] = e.target.id.split("--")
+    completeTask(id).then(
+      () => {
+        console.log("hi")
+        
+        const updatedTasks = useTasks()
+        TaskListComponent()
+        render(updatedTasks)
+      })
   }
 })
