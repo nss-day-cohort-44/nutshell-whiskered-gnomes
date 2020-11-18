@@ -23,15 +23,13 @@ const render = () => {
 // create click event for Save Event button on form
 eventHub.addEventListener("click", (clickEvent) => {
     if (clickEvent.target.id === "saveEvent") {
-    const id = document.querySelector("#note--dateOfInterview").value;
-    const userId= document.querySelector("#note--author").value;
+    const userId= sessionStorage.getItem("activeUser")
     const eventName = document.querySelector("#event--eventName").value;
     const location = document.querySelector("#event--location").value;
     const date = document.querySelector("#event--date").value;
       // Make a new object representation of an event
     const newEntry = {
         // Key/value pairs here
-        id,
         userId,
         eventName,
         location,

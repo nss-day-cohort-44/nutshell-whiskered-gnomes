@@ -2,9 +2,10 @@
 // a list of events to the DOM 
 import { getUsers, useUsers } from "../../UsersDataProvider.js";
 import { getEvents, useEvents, deleteEvent } from "./EventDataProvider.js"
+import { eventHTML } from "./EventHTML.js";
 
 const eventHub = document.querySelector(".container");
-const eventsContainer = document.querySelector(".events");
+const eventsContainer = document.querySelector(".eventsList");
 
 export const EventList = () => {
     getEvents()
