@@ -24,7 +24,8 @@ export const useMessages = () => {
                 // console.log("sorted messages", sortedByTimestamp)
                 return sortedByTimestamp
     }
-
+/* called by the event listener in MessageForm. 
+posts new message object to messages json resource, then calls dispatchStateChangeEvent function*/
 export const saveMessage = object => {
     return fetch("http://localhost:8088/messages", {
         method: "POST",
@@ -35,6 +36,8 @@ export const saveMessage = object => {
     .then(dispatchStateChangeEvent)
 }
 
+/* dispatches a custom event. should be called whenever there is a message 
+saved or deleted. picked up by MessageList to re-render messages with latest list. */
 const dispatchStateChangeEvent = () => {
     const messageStateChangedEvent = new CustomEvent("messageStateChanged")
     eventHub.dispatchEvent(messageStateChangedEvent)

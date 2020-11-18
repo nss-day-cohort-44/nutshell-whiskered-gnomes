@@ -17,14 +17,16 @@ export const MessageForm = () => {
     `
 }
 
-/* This page needs an event listener to listen for the click of the send button,
+/* event listener to listen for the click of the send button,
 gather values from the form, build an object, and call the 
-addMessage function with the object used as argument */
+saveMessage function with the object used as argument, call MessageForm to clear 
+the form */
 eventHub.addEventListener("click", event => {
     if (event.target.id === "saveMessage"){
         console.log(event)
         const userId = parseInt(sessionStorage.getItem("activeUser"))
         const message = document.querySelector(".message__field").value 
+        // something about this timestamp has broken my sort in useMessages. Working on a fix.
         const timestamp = event.timeStamp
 
         const newMessageObj = {

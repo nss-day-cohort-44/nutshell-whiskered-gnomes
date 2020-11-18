@@ -40,9 +40,8 @@ const renderMessages = () => {
     `
 }
 
-/* add event listener to listen for message dp state change event for when a message is 
-added or deleted? Does the whole list really need to re-render each time a message is added?
-Or deleted? */
+/* event listener to listen for message dp state change event for when a message is 
+added or deleted */
 eventHub.addEventListener("messageStateChanged", () => MessageList())
 
 /* add event listener to listen to delete message click and pass a detail of the id
