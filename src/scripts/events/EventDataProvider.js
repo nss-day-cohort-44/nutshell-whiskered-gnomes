@@ -1,5 +1,9 @@
 // Author: Danny- create a component reponsible for getting events data from local API for upcoming events
+
+import { allFriendsURL } from "../friends/FriendsDataProvider.js"
+
 let events = [];
+let allFriends
 
 const dispatchStateChangeEvent = () => {
     const eventStateChangedEvent = new CustomEvent("eventStateChanged");
@@ -11,28 +15,31 @@ export const useEvents = () => {
 };
 
 export const getEvents = () => {
-    return fetch("http://localhost:8088/events?_expand=user")
-    .then((response) => response.json())
-    .then((parsedEvents) => {
-        console.log(parsedEvents)
-        events = parsedEvents;
-    });
+    debugger
+    allFriends = allFriendsURL()
+    return fetch(`http://localhost:8088/events?${allFriends}&_expand=user`)
+        .then((response) => response.json())
+        .then((parsedEvents) => {
+            console.log(`http://localhost:8088/events?${allFriends}&_expand=user`)
+            console.log(parsedEvents)
+            events = parsedEvents;
+        });
 };
 
 export const saveEvent = (event) => {
     return fetch("http://localhost:8088/events", {
-    method: "POST",
-    headers: {
-        "Content-Type": "application/json",
-    },
-    body: JSON.stringify(event),
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(event),
     })
-    .then(getEvents)
-    .then(dispatchStateChangeEvent);
+        .then(getEvents)
+        .then(dispatchStateChangeEvent);
 };
 
 export const deleteEvent = (eventId) => {
     return fetch(`http://localhost:8088/events/${eventId}`, {
-    method: "DELETE",
+        method: "DELETE",
     }).then(getEvents);
 };
