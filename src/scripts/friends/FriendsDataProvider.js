@@ -16,6 +16,33 @@ let friends = []
 export const useFriends = () => friends.slice()
 
 
+// EXAMPLE:  `http://localhost:8088/events?${allFriendsURL()}&_expand=user`  =  user=1&user=2&user=3... ect.
+// FIRST stores all relevant data.
+// SECOND filters all relationships pertaining to the current active user.
+// THIRD initialises an array with the current user's id as the first object in said array.
+// FOURTH pushes all followee Id's into said array.
+// FIFTH adds 'userId=' before every object and stores into a new array.
+// SIXTH joins all objects in the new array with "&" and converts new array into a single string.
+export const allFriendsURL = () => {
+    // debugger
+    const userId = parseInt(sessionStorage.getItem("activeUser"))
+    const allRelationships = useFriends()
+    const userRelationships = allRelationships.filter(relationship => relationship.userId === userId)
+    let allIds = [userId]
+    userRelationships.map(relationship => {
+        allIds.push(relationship.followeeId)
+    })
+    if (allIds.length > 1) {
+        const url = allIds.map(id => `userId=${id}`)
+        const friendsUrl = url.join(`&`)
+        // console.log(friendsUrl)
+        return friendsUrl
+    } else {
+        return `userId=${userId}`
+    }
+}
+
+
 // Gets All relationships
 export const getFriends = () => {
     return fetch("http://localhost:8088/friends")
@@ -25,7 +52,7 @@ export const getFriends = () => {
 }
 
 
-// Post a new relationship
+// Posts a new relationship
 export const addFriend = realtionshipObj => {
     return fetch("http://localhost:8088/friends", {
         method: "POST",
@@ -34,8 +61,8 @@ export const addFriend = realtionshipObj => {
         },
         body: JSON.stringify(realtionshipObj)
     })
-        // .then(getFriends)
-        // .then(friendChangeEvent)
+    // .then(getFriends)
+    // .then(friendChangeEvent)
 }
 
 
@@ -44,6 +71,6 @@ export const deleteFriend = relationship => {
     return fetch(`http://localhost:8088/friends/${relationship.id}`, {
         method: "DELETE"
     })
-        // .then(getFriends)
-        // .then(friendChangeEvent)
+    // .then(getFriends)
+    // .then(friendChangeEvent)
 }
