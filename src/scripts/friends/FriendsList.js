@@ -5,7 +5,6 @@ import { getFriends, useFriends } from "./FriendsDataProvider.js"
 import { getUsers, useUsers } from "../UsersDataProvider.js"
 import { friendHTML } from "./FriendHTML.js"
 
-
 const eventHub = document.querySelector(".container")
 const friendsElement = document.querySelector(".friends")
 
