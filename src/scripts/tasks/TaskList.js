@@ -31,7 +31,7 @@ const render = () => {
   }
   contentTarget.innerHTML = 
   `
-  <div>
+  <div class="taskContainer">
   <h3>Tasks</h3>
   ${tasksHTML}
   </div>

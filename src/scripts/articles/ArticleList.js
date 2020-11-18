@@ -31,7 +31,7 @@ const render = (articlesArray) => {
   console.log(articlesArray) 
   contentTarget.innerHTML = 
   `
-  <div>
+  <div class="articleContainer">
   <h3>Article List</h3>
   ${articlesHTML}
   </div>
