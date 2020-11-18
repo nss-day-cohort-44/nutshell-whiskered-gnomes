@@ -21,8 +21,8 @@ export const useFriends = () => friends.slice()
 // SECOND filters all relationships pertaining to the current active user.
 // THIRD initialises an array with the current user's id as the first object in said array.
 // FOURTH pushes all followee Id's into said array.
-// FIFTH adds 'user=' before every object and stores into a new array.
-// SIXTH joins all objects in the new array with "&&" and converts new array into a single string.
+// FIFTH adds 'userId=' before every object and stores into a new array.
+// SIXTH joins all objects in the new array with "&" and converts new array into a single string.
 export const allFriendsURL = () => {
     getFriends()
         .then(() => {
