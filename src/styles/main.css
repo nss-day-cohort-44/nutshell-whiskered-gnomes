@@ -1,3 +1,9 @@
+.messages {
+    border: 1px dotted gray;
+}
+.message__card {
+    border: 1px dotted tomato;
+}
 .task--card {
   border: 1px solid black;
 }
