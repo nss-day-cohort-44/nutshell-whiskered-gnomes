@@ -1,4 +1,6 @@
 // Author: Danny- create a component reponsible for rendering a form for an event you want to create
+import { saveEvent } from "./EventDataProvider.js";
+
 const contentTarget = document.querySelector(".events");
 const eventHub = document.querySelector(".container");
 
@@ -23,12 +25,12 @@ const render = () => {
 // create click event for Save Event button on form
 eventHub.addEventListener("click", (clickEvent) => {
     if (clickEvent.target.id === "saveEvent") {
-    const userId= sessionStorage.getItem("activeUser")
+    const userId= parseInt(sessionStorage.getItem("activeUser"));
     const eventName = document.querySelector("#event--eventName").value;
     const location = document.querySelector("#event--location").value;
     const date = document.querySelector("#event--date").value;
       // Make a new object representation of an event
-    const newEntry = {
+    const newEvent = {
         // Key/value pairs here
         userId,
         eventName,
@@ -36,6 +38,6 @@ eventHub.addEventListener("click", (clickEvent) => {
         date,
     };
     // Change API state and application state
-    saveEntry(newEntry);
+    saveEvent(newEvent);
     }
 })

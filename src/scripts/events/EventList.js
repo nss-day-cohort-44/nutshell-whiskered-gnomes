@@ -9,29 +9,25 @@ const eventsContainer = document.querySelector(".eventsList");
 
 export const EventList = () => {
     getEvents()
-        .then(getUsers)
         .then(() => {
         const events = useEvents();
-        const users = useUsers()
-        render(events, users);
+        console.log(events)
+        render(events);
     });
 };
 
-const render = (eventsArray, usersArray) => {
-    eventsContainer.innerHTML = eventsArray
-    .map((event) => {
-    const relatedUser = usersArray.find(
-        (user) => user.id === event.userId
-    );
-    return `
+const render = (eventsArray) => {
+    let eventsHTMLRepresentation = "";
+    for (const event of eventsArray) {
+        eventsHTMLRepresentation += eventHTML(event);
+    }
+    eventsContainer.innerHTML = `
         <div class="Events__Aside">
         <h3 class="events__header">Events</h3>
-        ${eventHTML(event, relatedUser)}
+        ${eventsHTMLRepresentation}
         </div>               
         `;
-    })
-    .join("");
-};
+}
 
 eventHub.addEventListener("click", (clickEvent) => {
     if (clickEvent.target.id.startsWith("deleteEvent--")) {
