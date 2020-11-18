@@ -6,7 +6,7 @@ let tasks = []
 
 //get tasks
 export const getTasks = () => {
-  return fetch("http://localhost:8088/tasks")
+  return fetch("http://localhost:8088/tasks?completed=false")
   .then(response => response.json())
     .then(apiData => {
       tasks = apiData
@@ -33,4 +33,27 @@ export const saveTask = (newTask) => {
   })
     .then(getTasks)  // <-- Get all tasks
     .then(dispatchStateChangeEvent)  // <-- Broadcast the state change event
+}
+
+
+//to delete task
+export const deleteTask = id => {
+  return fetch(`http://localhost:8088/tasks/${id}`,{
+    method: "DELETE"
+  })
+  .then(getTasks)
+}
+
+export const completeTask = (id) => {
+  return fetch(`http://localhost:8088/tasks/${id}`,{
+    method: "PATCH",
+    headers: {
+      "Content-type": "application/json"
+      },
+    body: JSON.stringify({
+      completed: true
+      })
+  })
+  
+  .then(getTasks)
 }
