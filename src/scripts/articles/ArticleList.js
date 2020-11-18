@@ -1,6 +1,6 @@
 //J.Kaset create a component reponsible for envoking all the other components in this module and rendering
 // a list of events to the DOM 
-import { getArticles, useArticles } from "./ArticleDataProvider.js"
+import { getArticles, useArticles, deleteArticle } from "./ArticleDataProvider.js"
 import { Article } from "./ArticleHTML.js"
 
 
@@ -38,3 +38,21 @@ const render = (articlesArray) => {
   `
  
 }
+
+//EVENTHUB FOR DELETE
+eventHub.addEventListener("click", e => {
+  if (e.target.id.startsWith("deleteArticle--")) {
+    //console.log("I'm listnin")
+    const [prefix, id] = e.target.id.split("--")
+
+    deleteArticle(id).then(
+      () => {
+        
+        const updatedArticles = useArticles()
+        ArticleListComponent()
+        render(updatedArticles)
+    
+      }
+    )
+  }
+})
