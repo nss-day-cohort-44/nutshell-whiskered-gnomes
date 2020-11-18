@@ -30,6 +30,7 @@ eventHub.addEventListener("click", event => {
             message,
             timestamp
         }
+        // console.log("new message: ", newMessageObj)
+        saveMessage(newMessageObj)
     }
-    console.log("new message: ", newMessageObj)
 })
