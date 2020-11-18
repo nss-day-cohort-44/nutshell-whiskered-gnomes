@@ -1,4 +1,5 @@
-/* author: Kristen Steele | module purpose: provides functionality to populate message html to the DOM
+/* author: Kristen Steele | 
+module purpose: provides functionality to populate message html to the DOM */
 
 // import messageHTML, getMessages, useMessages
 import { getMessages, useMessages } from "./MessageDataProvider.js"
