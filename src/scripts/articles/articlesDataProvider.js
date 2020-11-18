@@ -7,10 +7,10 @@ export const useArticles = () => {
 };
 
 export const getArticles = () => {
-    return fetch(`http://localhost:8088/articles?${allFriends}&_expand=user`)
+    return fetch(`http://localhost:8088/articles?_expand=user`)
     .then((response) => response.json())
     .then((parsedArticles) => {
-        console.log(`http://localhost:8088/articles?${allFriends}&_expand=user`)
+        console.log(`http://localhost:8088/articles?_expand=user`)
         console.log(parsedArticles)
         articles = parsedArticles;
     });

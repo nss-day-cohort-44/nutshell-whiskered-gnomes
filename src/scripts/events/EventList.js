@@ -11,7 +11,7 @@ export const EventList = () => {
     getEvents()
         .then(() => {
         const events = useEvents();
-};
+});
 const render = (eventsArray) => {
     let eventsHTMLRepresentation = "";
     eventsArray[0].upcomingEvent = true;
