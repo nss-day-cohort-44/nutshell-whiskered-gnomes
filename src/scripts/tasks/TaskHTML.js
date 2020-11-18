@@ -7,7 +7,7 @@ export const Task = (taskObj) => {
     <p>Expected Completion: ${taskObj.completeDate}</p>
     <input type="radio" id="task--complete" name="completed" value="completed" />
     <label for="completed">Select when completed</label>
-    <button id="task--delete">Delete</button>
+    <button id="deleteTask--${taskObj.id}">Delete</button>
   </div>
   `
 }

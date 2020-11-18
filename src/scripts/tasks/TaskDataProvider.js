@@ -34,3 +34,11 @@ export const saveTask = (newTask) => {
     .then(getTasks)  // <-- Get all tasks
     .then(dispatchStateChangeEvent)  // <-- Broadcast the state change event
 }
+
+//to delete task
+export const deleteTask = id => {
+  return fetch(`http://localhost:8088/tasks/${id}`,{
+    method: "DELETE"
+  })
+  .then(getTasks)
+}
