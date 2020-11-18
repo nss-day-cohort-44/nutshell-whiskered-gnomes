@@ -16,7 +16,7 @@ let friends = []
 export const useFriends = () => friends.slice()
 
 
-// EXAMPLE:  `http://localhost:8088/events?${allFriendsURL()}`  =  user=1&&user=2&&user=3... ect.
+// EXAMPLE:  `http://localhost:8088/events?${allFriendsURL()}&_expand=user`  =  user=1&user=2&user=3... ect.
 // FIRST stores all relevant data.
 // SECOND filters all relationships pertaining to the current active user.
 // THIRD initialises an array with the current user's id as the first object in said array.
@@ -34,8 +34,8 @@ export const allFriendsURL = () => {
             userRelationships.map(relationship => {
                 allIds.push(relationship.followeeId)
             })
-            const url = allIds.map(id => `user=${id}`)
-            const friendsUrl = url.join(`&&`)
+            const url = allIds.map(id => `userId=${id}`)
+            const friendsUrl = url.join(`&`)
             console.log(friendsUrl)
             return friendsUrl
         })
