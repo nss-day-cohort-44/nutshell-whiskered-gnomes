@@ -1,5 +1,6 @@
 // import messageHTML, getMessages, useMessages
 import { getMessages, useMessages } from "./MessageDataProvider.js"
+import { messageHTML } from "./MessageHTML.js"
 
 // define eventHub and contentTarget
 const eventHub = document.querySelector(".container")
@@ -15,16 +16,31 @@ export const MessageList = () => {
     getMessages()
         .then(() => {
             messages = useMessages()
-            console.log("MessageList messages: ", messages)
-            renderMessages()
-        })
+            
+            // console.log("MessageList messages: ", messages)
+        }).then(renderMessages)
 }
 
 /* render will define an empty string to hold html reps, 
 iterate through messages array and call messageHTML for each message obj,
 then append the html reps to the dom in ascending order. 
 Is this where ascending order should be implemented? */
+const renderMessages = () => {
+    let messagesHTMLrepresentations = ""
+    
+    for (const messageObj of messages) {
+        messagesHTMLrepresentations += messageHTML(messageObj)
+    }
+    
+    console.log("this should be a string of html", messagesHTMLrepresentations)
 
+    contentTarget.innerHTML = `
+        <h3>Public Chat</h3>
+        <div class="message__list>
+            ${messagesHTMLrepresentations}
+        </div>
+    `
+}
 
 
 

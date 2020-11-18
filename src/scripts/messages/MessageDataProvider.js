@@ -17,6 +17,6 @@ export const useMessages = () => {
             (a, b) => {
                 return b.timestamp-a.timestamp}
                 )
-                console.log("sorted messages", sortedByTimestamp)
+                // console.log("sorted messages", sortedByTimestamp)
                 return sortedByTimestamp
     }
