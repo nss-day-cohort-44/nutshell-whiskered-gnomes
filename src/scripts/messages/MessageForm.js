@@ -27,7 +27,7 @@ eventHub.addEventListener("click", event => {
         const userId = parseInt(sessionStorage.getItem("activeUser"))
         const message = document.querySelector(".message__field").value 
         // something about this timestamp has broken my sort in useMessages. Working on a fix.
-        const timestamp = event.timeStamp
+        const timestamp = Date.now()
 
         const newMessageObj = {
             userId,
