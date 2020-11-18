@@ -30,8 +30,12 @@ const render = () => {
   for (const task of tasksArray) {
     tasksHTML += Task(task)
   }
-  contentTarget.innerHTML = `
+  contentTarget.innerHTML = 
+  `
+  <div>
+  <h3>Tasks</h3>
   ${tasksHTML}
+  </div>
   `
 }
 
