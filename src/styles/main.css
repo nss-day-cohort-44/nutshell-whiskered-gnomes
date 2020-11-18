@@ -7,3 +7,13 @@
 .task--card {
   border: 1px solid black;
 }
+.event__card {
+  border: 1px solid black;
+  width: 150px;
+}
+.upcomingEvent {
+  background-color: aquamarine;
+  font-weight: bold;
+  width: 250px;
+  font-size: x-large;
+}
