@@ -16,7 +16,7 @@ let friends = []
 export const useFriends = () => friends.slice()
 
 
-// EXAMPLE:  `http://localhost:8088/events?${allFriendsURL()}`  =  user=1&&user=2&&user=3
+// EXAMPLE:  `http://localhost:8088/events?${allFriendsURL()}`  =  user=1&&user=2&&user=3... ect.
 // FIRST stores all relevant data.
 // SECOND filters all relationships pertaining to the current active user.
 // THIRD initialises an array with the current user's id as the first object in said array.
@@ -51,7 +51,7 @@ export const getFriends = () => {
 }
 
 
-// Post a new relationship
+// Posts a new relationship
 export const addFriend = realtionshipObj => {
     return fetch("http://localhost:8088/friends", {
         method: "POST",
