@@ -1,0 +1,6 @@
+.messages {
+    border: 1px dotted gray;
+}
+.message__card {
+    border: 1px dotted tomato;
+}
