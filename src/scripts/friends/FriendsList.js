@@ -69,7 +69,6 @@ eventHub.addEventListener("click", addButton => {
 
         const addFriendEvent = new CustomEvent("add_Friend")
 
-        console.log("Add Friend Button Pinged")
         eventHub.dispatchEvent(addFriendEvent)
     }
 })
