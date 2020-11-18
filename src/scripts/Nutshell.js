@@ -1,15 +1,16 @@
 import { MessageList } from "./messages/MessageList.js"
-import { getTasks, useTasks } from "./tasks/TaskDataProvider.js"
 import { renderEventsButton } from "./events/AddEvent.js"
 import { friendsList } from "./friends/FriendsList.js"
 import { TaskListComponent } from "./tasks/TaskList.js"
 import { renderTaskButton } from "./tasks/AddTask.js"
 import { EventList } from "./events/EventList.js"
+import { renderArticleButton } from "./articles/addArticle.js"
 import "./friends/DeleteFriend.js"
 import "./events/EventForm.js"
 import "./tasks/TaskForm.js"
 import "./friends/FriendForm.js"
 import "./friends/AddFriend.js"
+
 
 
 export const Nutshell = () => {
@@ -21,9 +22,8 @@ export const Nutshell = () => {
         renderTaskButton()
         friendsList()
         EventList()
-        getTasks()
-        useTasks()
         MessageList()
+        renderArticleButton()
     } else {
         console.log("No User")
     }

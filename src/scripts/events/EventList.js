@@ -11,7 +11,7 @@ export const EventList = () => {
     getEvents()
         .then(() => {
         const events = useEvents();
-        console.log(events)
+        //console.log(events)
         render(events);
     });
 };
