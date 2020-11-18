@@ -2,6 +2,7 @@
 // Heath Lester
 // Provides HTML for another user to appear in the Friends List.
 
+const eventHub = document.querySelector(".container")
 
 export const friendHTML = friendObj => {
     return `
@@ -17,14 +18,13 @@ export const friendHTML = friendObj => {
 // Dispatches userId from input form
 eventHub.addEventListener("click", deleteClick => {
     if (deleteClick.target.id.startsWith("deleteFriend--")) {
-        // debugger
+        debugger
         const [prefix, friendId] = deleteClick.target.id.split("--")
-        // finish below
-        const saveEvent = new CustomEvent("addSavedFriend", {
+        const deleteEvent = new CustomEvent("deleteFriend", {
             detail: {
-                friendUsername: friendToSave
+                friendId,
             }
         })
-        eventHub.dispatchEvent(saveEvent)
+        eventHub.dispatchEvent(deleteEvent)
     }
 })
