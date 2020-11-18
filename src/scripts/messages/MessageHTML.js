@@ -11,7 +11,7 @@ and returns an html representation of that object, showing username and message.
  export const messageHTML = messageObj => {
      return `
      <div class="message__card">
-        <p id="${messageObj.user.id}">${messageObj.user.username}: ${messageObj.message}</p>
+        <p><a href="#" id="${messageObj.user.id}">${messageObj.user.username}</a>: ${messageObj.message}</p>
         <button id="deleteMessage--${messageObj.id}">delete</button>
      </div>
      `
