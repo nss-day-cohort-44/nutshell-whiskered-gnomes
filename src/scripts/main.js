@@ -1,10 +1,7 @@
 import { RegisterForm } from "./auth/RegisterForm.js"
 import { LoginForm } from "./auth/LoginForm.js"
 import { Nutshell } from "./Nutshell.js"
-import "./friends/FriendForm.js"
-import "./friends/AddFriend.js"
 
-// debugger
 
 /*
 1. Check if the user is authenticated by looking in session storage for `activeUser`
