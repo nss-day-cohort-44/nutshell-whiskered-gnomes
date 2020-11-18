@@ -36,7 +36,7 @@ const renderMessages = () => {
 
     contentTarget.innerHTML = `
         <h3>Public Chat</h3>
-        <div class="message__list>
+        <div class="message__list">
             ${messagesHTMLrepresentations}
         </div>
     `
