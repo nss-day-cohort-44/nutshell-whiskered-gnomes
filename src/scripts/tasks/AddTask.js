@@ -16,7 +16,7 @@ eventHub.addEventListener("click", (clickEvent) => {
   if (clickEvent.target.id === "create-task-button") {
 
     const taskButtonClicked = new CustomEvent("taskButtonClicked")
-    console.log(taskButtonClicked, "task button clicked")
+    //console.log(taskButtonClicked, "task button clicked")
     eventHub.dispatchEvent(taskButtonClicked)
   }
 })

@@ -3,7 +3,7 @@
 import {saveTask} from "./TaskDataProvider.js"
 
 const eventHub = document.querySelector(".container")
-const taskContainer = document.querySelector(".tasksList")
+const taskContainer = document.querySelector(".taskForm")
 
 
 // listens for click event dispatched in DisplayTaskButton.js

@@ -1,4 +1,4 @@
-
+import { MessageList } from "./messages/MessageList.js"
 import { getTasks, useTasks } from "./tasks/TaskDataProvider.js"
 import { renderEventsButton } from "./events/AddEvent.js"
 import { friendsList } from "./friends/FriendsList.js"
@@ -23,6 +23,7 @@ export const Nutshell = () => {
         EventList()
         getTasks()
         useTasks()
+        MessageList()
     } else {
         console.log("No User")
     }
