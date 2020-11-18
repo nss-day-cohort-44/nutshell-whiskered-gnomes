@@ -3,7 +3,6 @@
 import { allFriendsURL } from "../friends/FriendsDataProvider.js"
 
 let events = [];
-let allFriends
 
 const dispatchStateChangeEvent = () => {
     const eventStateChangedEvent = new CustomEvent("eventStateChanged");
@@ -19,9 +18,8 @@ export const useEvents = () => {
 };
 
 export const getEvents = () => {
-    debugger
-    allFriends = allFriendsURL()
-    return fetch(`http://localhost:8088/events?${allFriends}&_expand=user`)
+    // debugger
+    return fetch(`http://localhost:8088/events?${allFriendsURL()}&_expand=user`)
         .then((response) => response.json())
         .then((parsedEvents) => {
             // console.log(`http://localhost:8088/events?${allFriends}&_expand=user`)

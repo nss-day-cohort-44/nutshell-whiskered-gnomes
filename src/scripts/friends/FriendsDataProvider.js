@@ -24,7 +24,7 @@ export const useFriends = () => friends.slice()
 // FIFTH adds 'userId=' before every object and stores into a new array.
 // SIXTH joins all objects in the new array with "&" and converts new array into a single string.
 export const allFriendsURL = () => {
-    debugger
+    // debugger
     const userId = parseInt(sessionStorage.getItem("activeUser"))
     const allRelationships = useFriends()
     const userRelationships = allRelationships.filter(relationship => relationship.userId === userId)
@@ -35,7 +35,7 @@ export const allFriendsURL = () => {
     if (allIds.length > 1) {
         const url = allIds.map(id => `userId=${id}`)
         const friendsUrl = url.join(`&`)
-        console.log(friendsUrl)
+        // console.log(friendsUrl)
         return friendsUrl
     } else {
         return `userId=${userId}`
