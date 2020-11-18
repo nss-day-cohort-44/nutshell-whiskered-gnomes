@@ -24,3 +24,18 @@ export const useMessages = () => {
                 // console.log("sorted messages", sortedByTimestamp)
                 return sortedByTimestamp
     }
+
+export const saveMessage = object => {
+    return fetch("http://localhost:8088/messages", {
+        method: "POST",
+        headers: {
+            'Content-Type': 'application/json'},
+        body: JSON.stringify(object)
+    })
+    .then(dispatchStateChangeEvent)
+}
+
+const dispatchStateChangeEvent = () => {
+    const messageStateChangedEvent = new CustomEvent("messageStateChanged")
+    eventHub.dispatchEvent(messageStateChangedEvent)
+}
