@@ -1,3 +1,5 @@
+/* author: Kristen Steele | module purpose: provides functionality to populate message html to the DOM
+
 // import messageHTML, getMessages, useMessages
 import { getMessages, useMessages } from "./MessageDataProvider.js"
 import { messageHTML } from "./MessageHTML.js"
@@ -9,9 +11,7 @@ const contentTarget = document.querySelector(".messages")
 // should the variables needed be modular in scope?
 let messages = []
 
-/* MessageList will call getMessages, useMessages, and render.
-Should I limit the number of messages that come back in the array?
-Is this where they should be sorted by timestamp? */
+/* MessageList will call getMessages, useMessages, and render. */
 export const MessageList = () => {
     getMessages()
         .then(() => {
@@ -21,10 +21,9 @@ export const MessageList = () => {
         }).then(renderMessages)
 }
 
-/* render will define an empty string to hold html reps, 
-iterate through messages array and call messageHTML for each message obj,
-then append the html reps to the dom in ascending order. 
-Is this where ascending order should be implemented? */
+/* render defines an empty string to hold html reps, 
+iterates through messages array and calls messageHTML for each message obj,
+then appends the html reps to the dom in ascending order. */
 const renderMessages = () => {
     let messagesHTMLrepresentations = ""
     
