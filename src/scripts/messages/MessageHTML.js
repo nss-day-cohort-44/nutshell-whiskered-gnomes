@@ -7,3 +7,11 @@ and returns an html representation of that object, showing username and message.
 - is there a way to put an active user class on messages by the active user so they can be styled separately?
 - there also needs to be some visual representation of a way to delete each message 
  */
+
+ export const messageHTML = messageObj => {
+     return `
+     <div class="message--card">
+        <a href="#" id="${messageObj.user.id}">${messageObj.user.name}: </a><p>${messageObj.message}</p><button id="deleteMessage--${messageObj.id}">delete</button>
+     </div>
+     `
+ }
