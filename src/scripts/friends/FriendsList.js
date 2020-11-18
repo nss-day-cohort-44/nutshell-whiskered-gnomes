@@ -4,7 +4,8 @@
 import { getFriends, useFriends } from "./FriendsDataProvider.js"
 import { getUsers, useUsers } from "../UsersDataProvider.js"
 import { friendHTML } from "./FriendHTML.js"
-
+import { allFriendsURL } from "./FriendsDataProvider.js"
+allFriendsURL()
 
 const eventHub = document.querySelector(".container")
 const friendsElement = document.querySelector(".friends")
@@ -24,6 +25,7 @@ export const friendsList = () => {
                 const allUsers = useUsers()
 
                 parsedFriends(userId, allRelationships, allUsers)
+                allFriendsURL()
             })
     }
 }

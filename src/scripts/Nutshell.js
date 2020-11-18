@@ -35,4 +35,3 @@ eventHub.addEventListener("userAuthenticated", e => {
     Nutshell()
 })
 
-
