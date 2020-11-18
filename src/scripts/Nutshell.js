@@ -13,14 +13,13 @@ import "./tasks/TaskForm.js"
 import "./friends/FriendForm.js"
 import "./friends/AddFriend.js"
 
-
+debugger
 export const Nutshell = () => {
     if (sessionStorage.activeUser) {
         getTasks()
         renderEventsButton()
         TaskListComponent()
         renderTaskButton()
-        friendsList()
         EventList()
         getTasks()
         useTasks()
@@ -28,7 +27,9 @@ export const Nutshell = () => {
         // Render all your UI components here
         getFriends()
             .then(allFriendsURL)
+            .then(friendsList)
             .then(getEvents)
+
     } else {
         console.log("No User")
     }
