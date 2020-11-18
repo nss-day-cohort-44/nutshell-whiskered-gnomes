@@ -1,7 +1,6 @@
-import { allFriendsURL, getFriends } from "./friends/FriendsDataProvider.js"
+import { getFriends } from "./friends/FriendsDataProvider.js"
 import { getTasks, useTasks } from "./tasks/TaskDataProvider.js"
 import { renderEventsButton } from "./events/AddEvent.js"
-import { getEvents } from "./events/EventDataProvider.js"
 import { MessageList } from "./messages/MessageList.js"
 import { TaskListComponent } from "./tasks/TaskList.js"
 import { friendsList } from "./friends/FriendsList.js"
@@ -13,22 +12,20 @@ import "./tasks/TaskForm.js"
 import "./friends/FriendForm.js"
 import "./friends/AddFriend.js"
 
-debugger
+
+
 export const Nutshell = () => {
+    // Render all your UI components here
     if (sessionStorage.activeUser) {
-        getTasks()
         renderEventsButton()
         TaskListComponent()
         renderTaskButton()
-        EventList()
         getTasks()
         useTasks()
         MessageList()
-        // Render all your UI components here
         getFriends()
-            .then(allFriendsURL)
             .then(friendsList)
-            .then(getEvents)
+            .then(EventList)
 
     } else {
         console.log("No User")

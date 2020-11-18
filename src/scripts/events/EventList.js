@@ -11,13 +11,14 @@ export const EventList = () => {
     getEvents()
         .then(() => {
         const events = useEvents();
-        console.log(events)
+        // console.log(events)
         render(events);
     });
 };
 
 const render = (eventsArray) => {
     let eventsHTMLRepresentation = "";
+    eventsArray[0].upcomingEvent = true;
     for (const event of eventsArray) {
         eventsHTMLRepresentation += eventHTML(event);
     }

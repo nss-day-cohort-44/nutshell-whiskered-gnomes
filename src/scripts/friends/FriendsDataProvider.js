@@ -38,7 +38,6 @@ export const allFriendsURL = () => {
         console.log(friendsUrl)
         return friendsUrl
     } else {
-        // console.log("userId", userId)
         return `userId=${userId}`
     }
 }

@@ -11,7 +11,11 @@ const dispatchStateChangeEvent = () => {
 };
 
 export const useEvents = () => {
-    return events.slice();
+   const sortedByDate = events.sort(
+       (currentEvent, nextEvent) =>
+        Date.parse(currentEvent.date) - Date.parse(nextEvent.date)
+   )
+    return sortedByDate
 };
 
 export const getEvents = () => {
@@ -20,8 +24,7 @@ export const getEvents = () => {
     return fetch(`http://localhost:8088/events?${allFriends}&_expand=user`)
         .then((response) => response.json())
         .then((parsedEvents) => {
-            console.log(`http://localhost:8088/events?${allFriends}&_expand=user`)
-            console.log(parsedEvents)
+            // console.log(`http://localhost:8088/events?${allFriends}&_expand=user`)
             events = parsedEvents;
         });
 };
