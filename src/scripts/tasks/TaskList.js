@@ -1,9 +1,10 @@
 //J.Kaset - This module turns data into HTML (from TaskHTML.js), renders tasks saved in TaskForm.js to DOM
 
 
-import { getTasks, useTasks, deleteTask } from "./TaskDataProvider.js"
+import { getTasks, useTasks, deleteTask, completeTask } from "./TaskDataProvider.js"
 import { renderTaskForm } from "./TaskForm.js"
 import { Task } from "./TaskHTML.js"
+
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".tasksList")
@@ -37,7 +38,7 @@ const render = () => {
 //EVENTHUB FOR DELETE
 eventHub.addEventListener("click", e => {
   if (e.target.id.startsWith("deleteTask--")) {
-    console.log("I'm listnin")
+    //console.log("I'm listnin")
     const [prefix, id] = e.target.id.split("--")
 
     deleteTask(id).then(
@@ -52,3 +53,10 @@ eventHub.addEventListener("click", e => {
   }
 })
 
+//EVENT FOR CLICKING COMPLETED IN RADIO BUTTON
+eventHub.addEventListener("click", e => {
+  if (e.target.id === "completeTask") {
+    console.log( e.target.id, "youclicked it")
+    //completeTask()
+  }
+})

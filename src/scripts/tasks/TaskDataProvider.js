@@ -42,3 +42,14 @@ export const deleteTask = id => {
   })
   .then(getTasks)
 }
+
+export const completeTask = (id) => {
+  return fetch(`http://localhost:8088/tasks/${id}`,{
+    method: "PATCH",
+    body: JSON.stringify({
+      completed: true
+      })
+  })
+  
+  .then(getTasks)
+}
