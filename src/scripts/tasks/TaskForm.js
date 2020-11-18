@@ -6,7 +6,7 @@ const eventHub = document.querySelector(".container")
 const taskContainer = document.querySelector(".taskForm")
 
 
-// listens for click event dispatched in DisplayTaskButton.js
+// listens for click event dispatched in AddTask.js
 eventHub.addEventListener("taskButtonClicked", () => {
   //console.log("heard")
   renderTaskForm()

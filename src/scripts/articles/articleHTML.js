@@ -1,15 +1,16 @@
-//J.Kaset HTML representation of one article
+//J.Kaset HTML representation of one article. 
 
 export const Article = (articleObj) => {
   return `
-    <div class="article--card" id="userId--${articleObj.userId}">
+    <div class="news--card" id="userId--${articleObj.user.id}">
     <p><a href="#" id="${articleObj.user.id}">${articleObj.user.username}</a>:
-    <h3>${articleObj.task}</h3>
+    <h4>${articleObj.title}</h4>
 
-    <p>Expected Completion: ${taskObj.completeDate}</p>
-    <input type="checkbox" id="completeTask--${taskObj.id}" name="completed" value="completed" />
-    <label for="completed">Select when completed</label>
-    <button id="deleteTask--${taskObj.id}">Delete</button>
-  </div>
-  `
-}
+    <p>Synopsis: ${articleObj.synopsis}</p>
+    <p>URL: ${articleObj.url}</p>
+    
+    <button id="deleteArticle--${articleObj.id}">Delete</button>
+    </div>
+    `
+  }
+ 

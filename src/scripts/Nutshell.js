@@ -10,7 +10,8 @@ import "./events/EventForm.js"
 import "./tasks/TaskForm.js"
 import "./friends/FriendForm.js"
 import "./friends/AddFriend.js"
-import { getArticles, useArticles } from "./articles/articlesDataProvider.js"
+import { getArticles, useArticles } from "./articles/ArticlesDataProvider.js"
+import "./articles/ArticleForm.js"
 
 
 
