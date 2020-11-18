@@ -1,6 +1,8 @@
 /* author: Kristen Steele | module purpose: renders a chat form to the dom, 
 then listens for the form button click, saves input values and uses them as 
-an argument to call the saveMessage function */
+an argument to call the saveMessage function, then dispatches a state change event */
+
+import { saveMessage } from "./MessageDataProvider.js"
 
 const eventHub = document.querySelector(".container")
 
@@ -32,5 +34,6 @@ eventHub.addEventListener("click", event => {
         }
         // console.log("new message: ", newMessageObj)
         saveMessage(newMessageObj)
+        MessageForm()
     }
 })
