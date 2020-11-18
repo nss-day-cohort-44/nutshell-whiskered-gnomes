@@ -27,11 +27,12 @@ export const Nutshell = () => {
         renderArticleButton()
         getTasks()
         useTasks()
-        MessageList()
         ArticleListComponent()
+        MessageList()
         getFriends()
-            .then(friendsList)
-            .then(EventList)
+        .then(friendsList)
+        .then(EventList)
+        
 
     } else {
         console.log("No User")
