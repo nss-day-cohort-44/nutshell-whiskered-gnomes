@@ -49,6 +49,7 @@ eventHub.addEventListener("click", e => {
       () => {
         
         const updatedArticles = useArticles()
+        console.log(updatedArticles)
         ArticleListComponent()
         render(updatedArticles)
     

@@ -16,7 +16,7 @@ export const getArticles = () => {
     return fetch(`http://localhost:8088/articles?${allFriendsURL()}&_expand=user`)
     .then((response) => response.json())
     .then((parsedArticles) => {
-        console.log(`http://localhost:8088/articles?_expand=user`)
+        //console.log(`http://localhost:8088/articles?${allFriendsURL()}&_expand=user`)
         console.log(parsedArticles)
         articles = parsedArticles;
     })
