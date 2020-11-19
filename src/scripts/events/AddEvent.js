@@ -1,5 +1,5 @@
 // Author: Danny- create a component reponsible for saving/adding an event to upcoming events 
-const contentTarget = document.querySelector(".events")
+const contentTarget = document.querySelector(".eventsForm")
 const eventHub = document.querySelector(".container")
 
 
