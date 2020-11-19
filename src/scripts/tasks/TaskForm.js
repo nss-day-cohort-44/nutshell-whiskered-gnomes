@@ -6,7 +6,7 @@ const eventHub = document.querySelector(".container")
 const taskContainer = document.querySelector(".taskForm")
 
 
-// listens for click event dispatched in DisplayTaskButton.js
+// listens for click event dispatched in AddTask.js
 eventHub.addEventListener("taskButtonClicked", () => {
   //console.log("heard")
   renderTaskForm()
@@ -28,7 +28,7 @@ export const renderTaskForm = () => {
 eventHub.addEventListener("click", (clickEvent) => {
   if (clickEvent.target.id === "saveTask") {
     //grab input values
-    const userId = sessionStorage.getItem("activeUser")
+    const userId = parseInt(sessionStorage.getItem("activeUser"))
     const task = document.querySelector("#taskForm--title").value
     const completed = false
     const completeDate = document.querySelector("#taskForm--date").value

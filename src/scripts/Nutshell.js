@@ -7,11 +7,15 @@ import { TaskListComponent } from "./tasks/TaskList.js"
 import { friendsList } from "./friends/FriendsList.js"
 import { renderTaskButton } from "./tasks/AddTask.js"
 import { EventList } from "./events/EventList.js"
+import { renderArticleButton } from "./articles/addArticle.js"
+import { ArticleListComponent } from "./articles/ArticleList.js"
 import "./friends/DeleteFriend.js"
 import "./events/EventForm.js"
 import "./tasks/TaskForm.js"
 import "./friends/FriendForm.js"
 import "./friends/AddFriend.js"
+import "./articles/articleForm.js"
+
 
 
 
@@ -21,13 +25,16 @@ export const Nutshell = () => {
         renderEventsButton()
         TaskListComponent()
         renderTaskButton()
+        renderArticleButton()
         getTasks()
         useTasks()
+        ArticleListComponent()
         MessageList()
         MessageForm()
         getFriends()
-            .then(friendsList)
-            .then(EventList)
+        .then(friendsList)
+        .then(EventList)
+        
 
     } else {
         console.log("No User")
