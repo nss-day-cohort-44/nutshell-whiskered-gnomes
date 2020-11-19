@@ -13,4 +13,3 @@ export const Article = (articleObj) => {
     </div>
     `
   }
- 
