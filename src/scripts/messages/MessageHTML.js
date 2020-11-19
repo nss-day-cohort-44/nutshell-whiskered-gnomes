@@ -12,8 +12,28 @@ and returns an html representation of that object, showing username and message.
  export const messageHTML = messageObj => {
      return `
      <div class="message__card">
-        <p><a href="#" id="${messageObj.user.id}">${messageObj.user.username}</a>: ${messageObj.message}</p>
+        <p><a href="#" id="addFriend--${messageObj.user.username}">${messageObj.user.username}</a>: ${messageObj.message}</p>
         <button id="deleteMessage--${messageObj.id}">delete</button>
      </div>
      `
  }
+
+const eventHub = document.querySelector(".container")
+
+ // Dispatches userId from input form
+eventHub.addEventListener("click", event => {
+    if (event.target.id.startsWith("addFriend")) {
+        // debugger
+        const [prefix, friendName] = event.target.id.split("--")
+
+        let alert = confirm(`Add ${friendName} to your friends?`)
+        if (alert === true){
+            const saveEvent = new CustomEvent("addSavedFriend", {
+                detail: {
+                    friendUsername: friendName
+                }
+            })
+            eventHub.dispatchEvent(saveEvent)
+        }
+    }
+})
