@@ -1,6 +1,7 @@
 //J.Kaset provides, fetches, saves, deletes all data about articles
 import {allFriendsURL} from "../friends/FriendsDataProvider.js"
 
+const eventHub = document.querySelector(".container")
 let articles = []
 
 
