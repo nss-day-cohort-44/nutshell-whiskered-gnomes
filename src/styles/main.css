@@ -12,6 +12,13 @@
 .messages {
     border: 1px dotted gray;
 }
+.message__list {
+    height: 400px;
+    width: 300px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
 .message__card {
     border: 1px dotted tomato;
 }

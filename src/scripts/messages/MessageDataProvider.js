@@ -19,7 +19,7 @@ export const getMessages = () => {
 export const useMessages = () => {
         const sortedByTimestamp = messages.sort(
             (a, b) => {
-                return a.timestamp-b.timestamp}
+                return b.timestamp-a.timestamp}
                 )
                 // console.log("sorted messages", sortedByTimestamp)
                 return sortedByTimestamp
