@@ -9,25 +9,32 @@
   display: flex;
   flex-wrap: wrap;
 }
-.messages {
-    border: 1px dotted gray;
+.containerLeft, .containerMid, .containerRight {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
+/* .messages {
+    border: 1px dotted gray;
+} */
 /* scroll functionality. sets static size for message container. messages populate from bottom. -KS*/
-.message__list {
+/* .message__list {
     height: 400px;
     width: 300px;
     overflow: auto;
     display: flex;
     flex-direction: column-reverse;
-}
-.message__card {
-    border: 1px dotted tomato;
-}
-.task--card, .news--card, .event__card {
+} */
+.task--card, .news--card, .event__card, .message__card, .friend__card {
   border: 1px solid black;
   margin: 10px;
   padding: 10px;
 }
+/* .news--card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+} */
 .events, .eventForm {
     display: flex;
     flex-wrap: wrap;
@@ -39,11 +46,11 @@
   width: 250px;
   font-size: x-large;
 }
-.taskContainer, .articleContainer {
+/* .taskContainer, .articleContainer {
   border: 1px solid black;
   padding: 10px;
-}
-.friend__card {
+} */
+/* .friend__card {
   border: 1px solid black;
   width: 150px;
-}
+} */
