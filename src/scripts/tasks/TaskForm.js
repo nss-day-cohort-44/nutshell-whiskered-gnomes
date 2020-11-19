@@ -49,8 +49,9 @@ eventHub.addEventListener("click", (clickEvent) => {
 })
 
 //listen for edit event created in TaskList.js
-eventHub.addEventListener("editButtonClicked", () => {//find
+eventHub.addEventListener("editButtonClicked", (taskCollection) => {//find
   
-  console.log("heard")
+  //console.log("heard")
+  const taskToEdit = taskCollection.find()
   
 })
