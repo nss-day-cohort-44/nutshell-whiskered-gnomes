@@ -27,18 +27,18 @@ export const MessageList = () => {
 iterates through messages array and calls messageHTML for each message obj,
 then appends the html reps to the dom in ascending order. */
 const renderMessages = () => {
-    let messagesHTMLrepresentations = ""
-    
-    for (const messageObj of messages) {
-        messagesHTMLrepresentations += messageHTML(messageObj)
+    if (sessionStorage.activeUser){
+        let messagesHTMLrepresentations = ""
+        
+        for (const messageObj of messages) {
+            messagesHTMLrepresentations += messageHTML(messageObj)
     }
-    
     // console.log("this should be a string of html", messagesHTMLrepresentations)
-
     contentTarget.innerHTML = `
         <h3>Public Chat</h3>
         ${messagesHTMLrepresentations}
     `
+    }
 }
 
 /* event listener to listen for message dp state change event for when a message is 
@@ -48,11 +48,11 @@ eventHub.addEventListener("messageStateChanged", () => MessageList())
 /* event listener to listen to delete message click and pass the id
 of the message as an argument to deleteMessage */
 eventHub.addEventListener("click", event => {
-    if (event.target.id.startsWith("deleteMessage--"))
+    if (event.target.id.startsWith("deleteMessage--")){
     // console.log("exterminate!");
     var [prefix, id] = event.target.id.split("--")
     // console.log(prefix, id);
-    deleteMessage(id)
+    deleteMessage(id)}
 })
 
 
