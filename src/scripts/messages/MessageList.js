@@ -35,10 +35,9 @@ const renderMessages = () => {
     }
     // console.log("this should be a string of html", messagesHTMLrepresentations)
     contentTarget.innerHTML = `
-        <h3>Public Chat</h3>
-        ${messagesHTMLrepresentations}
+    ${messagesHTMLrepresentations}
     `
-    }
+}
 }
 
 /* event listener to listen for message dp state change event for when a message is 
