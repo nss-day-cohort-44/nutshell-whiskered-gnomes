@@ -1,1 +1,0 @@
-// Author: Danny- create a component reponsible for deleting an event trhat is currently saved in the API as an upcoming event 

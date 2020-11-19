@@ -1,3 +1,14 @@
+.header {
+  background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.gFT1znkr4Odu8gTkSLFAyQHaE_%26pid%3DApi&f=1);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 250px;
+  height: 100px;
+}
+.dashboard {
+  display: flex;
+  flex-wrap: wrap;
+}
 .messages {
     border: 1px dotted gray;
 }
@@ -16,4 +27,8 @@
   font-weight: bold;
   width: 250px;
   font-size: x-large;
+}
+.friend__card {
+  border: 1px solid black;
+  width: 150px;
 }
