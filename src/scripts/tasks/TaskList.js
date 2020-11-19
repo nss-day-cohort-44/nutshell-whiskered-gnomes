@@ -67,3 +67,19 @@ eventHub.addEventListener("click", e => {
       })
   }
 })
+
+//EDIT EVENT
+eventHub.addEventListener("click", clickEvent => {
+  if (clickEvent.target.id.startsWith("editTask--")) {
+      const [notUsed, taskId] = clickEvent.target.id.split("--")
+
+      editTask(id).then
+      /*
+          Let all other components know that the user chose
+          to edit an entry, and attach data to the message
+          so that any listeners know which entry should be
+          edited.
+      */
+      const message = new CustomEvent()
+  }
+})
