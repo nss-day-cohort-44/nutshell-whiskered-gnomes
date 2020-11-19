@@ -58,5 +58,15 @@ export const completeTask = (id) => {
   .then(getTasks)
 }
 
-//editTask PUT = (taskObj)
-//fetch....${taskObj}
+
+export const editTask = (taskObj) => {
+  return fetch(`http://localhost:8088/tasks/${taskObj}`, {
+    method: "PUT",
+    headers: {
+        "Content-Type": "application/json"
+    },  
+    body: JSON.stringify(taskObj)
+  })
+    .then(getTasks)  // <-- Get all tasks
+    .then(dispatchStateChangeEvent)  // <-- Broadcast the state change event
+}
