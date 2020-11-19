@@ -2,7 +2,10 @@
 // Heath Lester
 // Matches deleting friends id to a relationship and deletes if from the /friends endpoint.
 
-import { useFriends, deleteFriend } from "./FriendsDataProvider.js"
+import { ArticleListComponent } from "../articles/ArticleList.js"
+import { EventList } from "../events/EventList.js"
+import { MessageList } from "../messages/MessageList.js"
+import { useFriends, deleteFriend, getFriends } from "./FriendsDataProvider.js"
 import { friendsList } from "./FriendsList.js"
 
 
@@ -20,5 +23,9 @@ eventHub.addEventListener("deleteFriend", unwantedFriend => {
     const userRelationships = allRelationships.filter(relationship => relationship.userId === currentUserId)
     const doomedRelationship = userRelationships.find(relationship => relationship.followeeId === unwantedFriend.detail.friendId)
     deleteFriend(doomedRelationship)
+        .then(getFriends)
         .then(friendsList)
+        .then(MessageList)
+        .then(EventList)
+        .then(ArticleListComponent)
 })

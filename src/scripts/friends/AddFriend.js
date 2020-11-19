@@ -1,9 +1,11 @@
 // Heath Lester
 // Listens for "saveFriend"; parses through users; adds relationship; re-renders FriendsList.
 
-
+import { ArticleListComponent } from "../articles/ArticleList.js"
+import { EventList } from "../events/EventList.js"
+import { MessageList } from "../messages/MessageList.js"
 import { useUsers } from "../UsersDataProvider.js"
-import { addFriend } from "./FriendsDataProvider.js"
+import { addFriend, getFriends } from "./FriendsDataProvider.js"
 import { friendsList } from "./FriendsList.js"
 
 
@@ -27,7 +29,11 @@ eventHub.addEventListener("addSavedFriend", friendObj => {
         }
 
         addFriend(newRelationship)
+            .then(getFriends)
             .then(friendsList)
+            .then(MessageList)
+            .then(EventList)
+            .then(ArticleListComponent)
     } else {
         alert("User not found!")
     }

@@ -1,6 +1,7 @@
 //J.Kaset provides, fetches, saves, deletes all data about articles
 import {allFriendsURL} from "../friends/FriendsDataProvider.js"
 
+const eventHub = document.querySelector(".container")
 let articles = []
 
 
@@ -9,8 +10,8 @@ export const useArticles = () => {
 };
 
 export const getArticles = () => {
-    return fetch(`http://localhost:8088/articles?_expand=user`)
-    //(`http://localhost:8088/articles?${allFriendsURL()}&_expand=user`)
+    return fetch(`http://localhost:8088/articles?${allFriendsURL()}&_expand=user`)
+    //(`http://localhost:8088/articles?${allFriendsURL()}&_expand=user`)(`http://localhost:8088/articles?_expand=user`)
     .then((response) => response.json())
     .then((parsedArticles) => {
         //console.log(`http://localhost:8088/articles?${allFriendsURL()}&_expand=user`)
