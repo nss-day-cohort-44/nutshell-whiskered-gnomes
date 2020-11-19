@@ -3,23 +3,26 @@ import {allFriendsURL} from "../friends/FriendsDataProvider.js"
 
 let articles = []
 
-const dispatchStateChangeEvent = () => {
-    const articleStateChangedEvent = new CustomEvent("articleStateChanged");
-    eventHub.dispatchEvent(articleStateChangedEvent)
-}
 
 export const useArticles = () => {
     return articles.slice();
 };
 
 export const getArticles = () => {
-    return fetch(`http://localhost:8088/articles?${allFriendsURL()}&_expand=user`)
+    return fetch(`http://localhost:8088/articles?_expand=user`)
+    //(`http://localhost:8088/articles?${allFriendsURL()}&_expand=user`)
     .then((response) => response.json())
     .then((parsedArticles) => {
         //console.log(`http://localhost:8088/articles?${allFriendsURL()}&_expand=user`)
         console.log(parsedArticles)
         articles = parsedArticles;
     })
+}
+//save article
+//first, listen for click event that saves form input in ArticleForm.js
+const dispatchStateChangeEvent = () => {
+    const articleStateChangedEvent = new CustomEvent("articleStateChanged");
+    eventHub.dispatchEvent(articleStateChangedEvent)
 }
 
 export const saveArticles = (articles) => {

@@ -1,6 +1,7 @@
 //J.Kaset - This module is responsible for rendering the form. Also creates click event for saving articles. 
 
 import {getArticles, saveArticles} from "./ArticleDataProvider.js"
+//import {ArticleListComponent} from "./ArticleList.js"
 
 const eventHub = document.querySelector(".container")
 const articleContainer = document.querySelector(".articleForm")
@@ -42,7 +43,6 @@ eventHub.addEventListener("click", (clickEvent) => {
       timestamp
   };
   // Change API state and application state
-    saveArticles(newArticle);
-  
+    saveArticles(newArticle)
   }
 })
