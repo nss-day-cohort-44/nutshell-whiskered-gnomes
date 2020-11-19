@@ -2,7 +2,7 @@
 module purpose: provides functionality to populate message html to the DOM */
 
 // import messageHTML, getMessages, useMessages
-import { getMessages, useMessages } from "./MessageDataProvider.js"
+import { deleteMessage, getMessages, useMessages } from "./MessageDataProvider.js"
 import { messageHTML } from "./MessageHTML.js"
 
 // define eventHub and contentTarget
@@ -45,7 +45,15 @@ added or deleted */
 eventHub.addEventListener("messageStateChanged", () => MessageList())
 
 /* add event listener to listen to delete message click and pass a detail of the id
-of the message to delete? */
+of the message to delete */
+
+eventHub.addEventListener("click", event => {
+    if (event.target.id.startsWith("deleteMessage--"))
+    // console.log("exterminate!");
+    var [prefix, id] = event.target.id.split("--")
+    // console.log(prefix, id);
+    deleteMessage(id)
+})
 
 
 
