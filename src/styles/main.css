@@ -10,7 +10,7 @@
   flex-wrap: wrap;
 }
 .messages {
-    border: 1px dotted gray;
+    /* border: 1px dotted gray; */
 }
 /* scroll functionality. sets static size for message container. messages populate from bottom. -KS*/
 .message__list {
