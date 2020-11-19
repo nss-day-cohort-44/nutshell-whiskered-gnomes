@@ -73,7 +73,8 @@ eventHub.addEventListener("click", e => {
 eventHub.addEventListener("click", clickEvent => {
   if (clickEvent.target.id.startsWith("editTask--")) {
     //console.log("hi")
-    const [notUsed, taskId] = clickEvent.target.id.split("--")
+    let [notUsed, taskId] = clickEvent.target.id.split("--")
+    taskId = parseInt(taskId)
     
         const editButtonClicked = new CustomEvent("editButtonClicked",{
           detail: {

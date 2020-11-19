@@ -4,6 +4,7 @@ import {saveTask, useTasks, editTask} from "./TaskDataProvider.js"
 
 const eventHub = document.querySelector(".container")
 const taskContainer = document.querySelector(".taskForm")
+const editContainer = document.querySelector(".taskUpdate")
 
 
 // listens for click event dispatched in AddTask.js
@@ -24,17 +25,18 @@ export const renderTaskForm = () => {
   `
 }
 
-// export const renderEditTaskForm = (taskObj) => {
+export const renderEditTaskForm = (taskObj) => {
 
-//   taskContainer.innerHTML = `
-//   <form class="taskForm">
-//   <input id="taskForm--title" type="text" placeholder="${taskObj.task}" required/>
-//   <label for="taskForm--${taskObj.completeDate}.value">Completion date:</label>
-//   <input id="taskForm--${taskObj.completeDate}" type="date" required/>
-//   <button id="editTask" type="button">Save task</button>
-//   </form>
-//   `
-// }
+  editContainer.innerHTML = `
+  <h4>Edit your Task</h4>
+  <form class="taskForm">
+  <input id="taskForm--title" type="text" placeholder="${taskObj.task}" required/>
+  <label for="taskForm--${taskObj.completeDate}.value">Completion date:</label>
+  <input id="taskForm--${taskObj.completeDate}" type="date" required/>
+  <button id="editTask" type="button">Save task</button>
+  </form>
+  `
+}
 
 //renderEditTaskForm above  value=${taskObj.something}, give button editId task
 
@@ -66,8 +68,10 @@ eventHub.addEventListener("click", (clickEvent) => {
 eventHub.addEventListener("editButtonClicked", editEvent => {
   //console.log("heard")
   const allTasks = useTasks()
-  const taskToEdit = allTasks.find(task => task.id === parseInt(editEvent.detail.taskId))
+  const taskToEdit = allTasks.find(task => task.id === editEvent.detail.taskId)
   console.log(taskToEdit)
   
-  renderTaskForm()
+  renderEditTaskForm(taskToEdit)
+  editTask()
+  
 })
