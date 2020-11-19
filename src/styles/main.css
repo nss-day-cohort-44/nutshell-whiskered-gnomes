@@ -18,13 +18,13 @@
     border: 1px dotted gray;
 } */
 /* scroll functionality. sets static size for message container. messages populate from bottom. -KS*/
-/* .message__list {
+.message__list {
     height: 400px;
     width: 300px;
     overflow: auto;
     display: flex;
     flex-direction: column-reverse;
-} */
+}
 .task--card, .news--card, .event__card, .message__card, .friend__card {
   border: 1px solid black;
   margin: 10px;
