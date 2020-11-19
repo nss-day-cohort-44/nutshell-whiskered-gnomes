@@ -29,8 +29,8 @@ const render = () => {
   for (const task of tasksArray) {
     tasksHTML += Task(task)
   }
-  contentTarget.innerHTML = 
-  `
+  contentTarget.innerHTML =
+    `
   <div class="taskContainer">
   <h3>Tasks</h3>
   ${tasksHTML}
@@ -46,11 +46,11 @@ eventHub.addEventListener("click", e => {
 
     deleteTask(id).then(
       () => {
-        
+
         const updatedTasks = useTasks()
         TaskListComponent()
         render(updatedTasks)
-    
+
       }
     )
   }
@@ -62,8 +62,8 @@ eventHub.addEventListener("click", e => {
     const [prefix, id] = e.target.id.split("--")
     completeTask(id).then(
       () => {
-        console.log("hi")
-        
+        //console.log("hi")
+
         const updatedTasks = useTasks()
         TaskListComponent()
         render(updatedTasks)
@@ -71,18 +71,27 @@ eventHub.addEventListener("click", e => {
   }
 })
 
-//EDIT EVENT
+//when you click edit button - EDIT EVENT
 eventHub.addEventListener("click", clickEvent => {
   if (clickEvent.target.id.startsWith("editTask--")) {
-      const [notUsed, taskId] = clickEvent.target.id.split("--")
+    //console.log("hi")
+    const [notUsed, taskId] = clickEvent.target.id.split("--")
+    
+        const editButtonClicked = new CustomEvent("editButtonClicked",{
+          detail: {
+            taskId
+          }
+        })
+        
+        console.log(editButtonClicked, "edit button clicked")
+        eventHub.dispatchEvent(editButtonClicked)
+      
 
-      editTask(id).then
-      /*
-          Let all other components know that the user chose
-          to edit an entry, and attach data to the message
-          so that any listeners know which entry should be
-          edited.
-      */
-      const message = new CustomEvent()
+    /*
+        Let all other components know that the user chose
+        to edit an entry, and attach data to the message
+        so that any listeners know which entry should be
+        edited.
+    */
   }
 })
