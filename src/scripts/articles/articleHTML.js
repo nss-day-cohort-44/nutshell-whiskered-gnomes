@@ -8,7 +8,7 @@ export const Article = (articleObj) => {
     <h4>${articleObj.title}</h4>
 
     <p>Synopsis: ${articleObj.synopsis}</p>
-    <p>URL: ${articleObj.url}</p>
+    <p></p> <a href="${articleObj.url}" target="blank">Click to read!</a>
     
     <button id="deleteArticle--${articleObj.id}">Delete</button>
     </div>
