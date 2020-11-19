@@ -7,6 +7,7 @@ export const eventHTML = (eventObj) => {
         <li>Date: ${eventObj.date}</li>
         <li>Location: ${eventObj.location}</li>
         <button id="deleteEvent--${eventObj.id}">Delete</button>
+        <button id="weatherButton">Weather</button>
     </ul>
     `;
 };
