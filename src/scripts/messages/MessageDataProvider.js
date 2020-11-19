@@ -36,6 +36,13 @@ export const saveMessage = object => {
     .then(dispatchStateChangeEvent)
 }
 
+export const deleteMessage = messageId => {
+    return fetch(`http://localhost:8088/messages/${messageId}`, {
+        method: "DELETE"
+    })
+    .then(dispatchStateChangeEvent)
+}
+
 /* dispatches a custom event. should be called whenever there is a message 
 saved or deleted. picked up by MessageList to re-render messages with latest list. */
 const dispatchStateChangeEvent = () => {
