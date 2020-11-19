@@ -1,7 +1,7 @@
 //J.Kaset create a component reponsible for envoking all the other components in this module and rendering
 // a list of events to the DOM 
 import { getArticles, useArticles, deleteArticle } from "./ArticleDataProvider.js"
-import { Article } from "./ArticleHTML.js"
+import { Article } from "./articleHTML.js"
 
 
 const eventHub = document.querySelector(".container")
