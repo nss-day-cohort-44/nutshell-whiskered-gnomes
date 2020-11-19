@@ -1,4 +1,5 @@
-/* author: Kristen Steele | module purpsose: return html representation for an obj
+/* author: Kristen Steele | 
+module purpsose: return html representation for an obj, listens for username click on message cards */
 
 /* messageHTML is called by render on MessageList. This takes an object as an argument 
 and returns an html representation of that object, showing username and message.
@@ -17,7 +18,9 @@ and returns an html representation of that object, showing username and message.
      </div>
      `
  }
-
+/* listens for click of username on message cards
+when clicked, alert window appears asking if the active user wants to add chosen user to friends
+if okay clicked, chosen user's name is sent as a detail along with "addSavedFriend" in dispatch event*/
 const eventHub = document.querySelector(".container")
 
  // Dispatches userId from input form
