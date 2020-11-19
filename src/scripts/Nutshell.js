@@ -1,7 +1,8 @@
+import { MessageList } from "./messages/MessageList.js"
+import { MessageForm } from "./messages/MessageForm.js"
 import { getFriends } from "./friends/FriendsDataProvider.js"
 import { getTasks, useTasks } from "./tasks/TaskDataProvider.js"
 import { renderEventsButton } from "./events/AddEvent.js"
-import { MessageList } from "./messages/MessageList.js"
 import { TaskListComponent } from "./tasks/TaskList.js"
 import { friendsList } from "./friends/FriendsList.js"
 import { renderTaskButton } from "./tasks/AddTask.js"
@@ -23,6 +24,7 @@ export const Nutshell = () => {
         getTasks()
         useTasks()
         MessageList()
+        MessageForm()
         getFriends()
             .then(friendsList)
             .then(EventList)

@@ -7,7 +7,7 @@ import { messageHTML } from "./MessageHTML.js"
 
 // define eventHub and contentTarget
 const eventHub = document.querySelector(".container")
-const contentTarget = document.querySelector(".messages")
+const contentTarget = document.querySelector(".message__list")
 
 // should the variables needed be modular in scope?
 let messages = []
@@ -32,21 +32,17 @@ const renderMessages = () => {
         messagesHTMLrepresentations += messageHTML(messageObj)
     }
     
-    console.log("this should be a string of html", messagesHTMLrepresentations)
+    // console.log("this should be a string of html", messagesHTMLrepresentations)
 
     contentTarget.innerHTML = `
         <h3>Public Chat</h3>
-        <div class="message__list">
-            ${messagesHTMLrepresentations}
-        </div>
+        ${messagesHTMLrepresentations}
     `
 }
 
-
-
-/* add event listener to listen for message dp state change event for when a message is 
-added or deleted? Does the whole list really need to re-render each time a message is added?
-Or deleted? */
+/* event listener to listen for message dp state change event for when a message is 
+added or deleted */
+eventHub.addEventListener("messageStateChanged", () => MessageList())
 
 /* add event listener to listen to delete message click and pass a detail of the id
 of the message to delete? */
