@@ -1,4 +1,6 @@
 // Author: Danny- create a component reponsible for rendering an upcoming event as an HTML card 
+const eventHub = document.querySelector(".container");
+
 export const eventHTML = (eventObj) => {
     if(eventObj.userId === parseInt(sessionStorage.getItem("activeUser"))) {
     return `
