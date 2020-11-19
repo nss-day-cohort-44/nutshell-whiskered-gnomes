@@ -1,5 +1,6 @@
 /* author: Kristen Steele | 
-module purpose: provides functionality to populate message html to the DOM */
+module purpose: provides functionality to populate messages html to the DOM, 
+and listen for events involving the message representations on the DOM */
 
 // import messageHTML, getMessages, useMessages
 import { deleteMessage, getMessages, useMessages } from "./MessageDataProvider.js"
@@ -44,9 +45,8 @@ const renderMessages = () => {
 added or deleted */
 eventHub.addEventListener("messageStateChanged", () => MessageList())
 
-/* add event listener to listen to delete message click and pass a detail of the id
-of the message to delete */
-
+/* event listener to listen to delete message click and pass the id
+of the message as an argument to deleteMessage */
 eventHub.addEventListener("click", event => {
     if (event.target.id.startsWith("deleteMessage--"))
     // console.log("exterminate!");

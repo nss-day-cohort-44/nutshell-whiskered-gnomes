@@ -35,7 +35,7 @@ export const saveMessage = object => {
     })
     .then(dispatchStateChangeEvent)
 }
-
+// called by the event listener in MessageList. Sends a fetch/DELETE request to the messages json resource
 export const deleteMessage = messageId => {
     return fetch(`http://localhost:8088/messages/${messageId}`, {
         method: "DELETE"
