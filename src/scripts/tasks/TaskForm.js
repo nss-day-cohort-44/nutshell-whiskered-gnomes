@@ -1,6 +1,6 @@
 //J.Kaset - This module is responsible for rendering the form. Also creates click event for saving tasks.
 
-import {saveTask, useTasks, editTask} from "./TaskDataProvider.js"
+import {saveTask, useTasks} from "./TaskDataProvider.js"
 
 const eventHub = document.querySelector(".container")
 const taskContainer = document.querySelector(".taskForm")
@@ -72,6 +72,6 @@ eventHub.addEventListener("editButtonClicked", editEvent => {
   console.log(taskToEdit)
   
   renderEditTaskForm(taskToEdit)
-  editTask()
+  //editTask()
   
 })

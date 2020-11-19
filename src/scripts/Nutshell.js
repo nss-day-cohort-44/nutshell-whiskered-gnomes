@@ -28,12 +28,12 @@ export const Nutshell = () => {
         renderArticleButton()
         getTasks()
         useTasks()
-        ArticleListComponent()
         MessageList()
         MessageForm()
         getFriends()
         .then(friendsList)
         .then(EventList)
+        .then(ArticleListComponent)
         
 
     } else {
