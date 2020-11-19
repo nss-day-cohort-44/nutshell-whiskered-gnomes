@@ -14,7 +14,7 @@ export const getArticles = () => {
     .then((response) => response.json())
     .then((parsedArticles) => {
         //console.log(`http://localhost:8088/articles?${allFriendsURL()}&_expand=user`)
-        console.log(parsedArticles)
+        //console.log(parsedArticles)
         articles = parsedArticles;
     })
 }

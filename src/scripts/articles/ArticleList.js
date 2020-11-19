@@ -16,7 +16,7 @@ export const ArticleListComponent = () => {
   getArticles()
   .then(() => {
     const articles = useArticles()
-    console.log(articles)
+    //console.log(articles)
     render(articles)
   })
 }
@@ -28,7 +28,7 @@ const render = (articlesArray) => {
   for (const article of articlesArray) {
     articlesHTML += Article(article)
   }
-  console.log(articlesArray) 
+  //console.log(articlesArray) 
   contentTarget.innerHTML = 
   `
   <div class="articleContainer">
