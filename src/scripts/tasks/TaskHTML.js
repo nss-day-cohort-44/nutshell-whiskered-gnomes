@@ -7,6 +7,8 @@ export const Task = (taskObj) => {
     <p>Expected Completion: ${taskObj.completeDate}</p>
     <input type="checkbox" id="completeTask--${taskObj.id}" name="completed" value="completed" />
     <label for="completed">Select when completed</label>
+    <input type="hidden" name="taskId" id="taskId">
+    <button id="editTask--${taskObj.id}">Edit</button>
     <button id="deleteTask--${taskObj.id}">Delete</button>
   </div>
   `
