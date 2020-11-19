@@ -1,6 +1,6 @@
 //J.Kaset - This module is responsible for rendering the form. Also creates click event for saving tasks.
 
-import {saveTask} from "./TaskDataProvider.js"
+import {saveTask, useTasks, editTask} from "./TaskDataProvider.js"
 
 const eventHub = document.querySelector(".container")
 const taskContainer = document.querySelector(".taskForm")
@@ -23,6 +23,20 @@ export const renderTaskForm = () => {
   </form>
   `
 }
+
+// export const renderEditTaskForm = (taskObj) => {
+
+//   taskContainer.innerHTML = `
+//   <form class="taskForm">
+//   <input id="taskForm--title" type="text" placeholder="${taskObj.task}" required/>
+//   <label for="taskForm--${taskObj.completeDate}.value">Completion date:</label>
+//   <input id="taskForm--${taskObj.completeDate}" type="date" required/>
+//   <button id="editTask" type="button">Save task</button>
+//   </form>
+//   `
+// }
+
+//renderEditTaskForm above  value=${taskObj.something}, give button editId task
 
 //create click event for Save button on form
 eventHub.addEventListener("click", (clickEvent) => {
@@ -49,9 +63,11 @@ eventHub.addEventListener("click", (clickEvent) => {
 })
 
 //listen for edit event created in TaskList.js
-eventHub.addEventListener("editButtonClicked", (taskCollection) => {//find
-  
+eventHub.addEventListener("editButtonClicked", editEvent => {
   //console.log("heard")
-  const taskToEdit = taskCollection.find()
+  const allTasks = useTasks()
+  const taskToEdit = allTasks.find(task => task.id === parseInt(editEvent.detail.taskId))
+  console.log(taskToEdit)
   
+  renderTaskForm()
 })

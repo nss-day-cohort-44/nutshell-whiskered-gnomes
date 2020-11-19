@@ -1,7 +1,7 @@
 //J.Kaset - This module turns data into HTML (from TaskHTML.js), renders tasks saved in TaskForm.js to DOM
 
 
-import { getTasks, useTasks, deleteTask, completeTask } from "./TaskDataProvider.js"
+import { getTasks, useTasks, deleteTask, completeTask} from "./TaskDataProvider.js"
 import { Task } from "./TaskHTML.js"
 
 
@@ -62,8 +62,6 @@ eventHub.addEventListener("click", e => {
     const [prefix, id] = e.target.id.split("--")
     completeTask(id).then(
       () => {
-        //console.log("hi")
-
         const updatedTasks = useTasks()
         TaskListComponent()
         render(updatedTasks)
@@ -85,13 +83,5 @@ eventHub.addEventListener("click", clickEvent => {
         
         console.log(editButtonClicked, "edit button clicked")
         eventHub.dispatchEvent(editButtonClicked)
-      
-
-    /*
-        Let all other components know that the user chose
-        to edit an entry, and attach data to the message
-        so that any listeners know which entry should be
-        edited.
-    */
   }
 })
