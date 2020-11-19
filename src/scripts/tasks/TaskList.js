@@ -2,7 +2,6 @@
 
 
 import { getTasks, useTasks, deleteTask, completeTask } from "./TaskDataProvider.js"
-import { renderTaskForm } from "./TaskForm.js"
 import { Task } from "./TaskHTML.js"
 
 
@@ -30,8 +29,12 @@ const render = () => {
   for (const task of tasksArray) {
     tasksHTML += Task(task)
   }
-  contentTarget.innerHTML = `
+  contentTarget.innerHTML = 
+  `
+  <div class="taskContainer">
+  <h3>Tasks</h3>
   ${tasksHTML}
+  </div>
   `
 }
 
