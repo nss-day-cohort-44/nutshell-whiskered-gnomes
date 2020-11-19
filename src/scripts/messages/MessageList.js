@@ -32,7 +32,7 @@ const renderMessages = () => {
         messagesHTMLrepresentations += messageHTML(messageObj)
     }
     
-    //console.log("this should be a string of html", messagesHTMLrepresentations)
+    console.log("this should be a string of html", messagesHTMLrepresentations)
 
     contentTarget.innerHTML = `
         <h3>Public Chat</h3>
