@@ -13,8 +13,8 @@ and returns an html representation of that object, showing username and message.
  export const messageHTML = messageObj => {
      return `
      <div class="message__card">
-        <p><a href="#" id="addMessageFriend--${messageObj.user.username}">${messageObj.user.username}</a>: ${messageObj.message}</p>
-        <button id="deleteMessage--${messageObj.id}">delete</button>
+        <p class="meesage__text"><a href="#" id="addMessageFriend--${messageObj.user.username}">${messageObj.user.username}</a><br>${messageObj.message}</p>
+        <button class="deleteButton" id="deleteMessage--${messageObj.id}">delete</button>
      </div>
      `
  }

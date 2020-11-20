@@ -15,8 +15,8 @@ eventHub.addEventListener("articleButtonClicked", () => {
 export const renderArticleForm = () => {
 
   articleContainer.innerHTML = `
-  <h3>Post a New Article</h3>
-  <form class="articleForm">
+  <h3 class="article_instruction">Post a New Article</h3>
+  <form id="articleForm">
   <input type="text" id="article--articleName" placeholder="Article Title">
   <input type="text" id="article--synopsis" placeholder="This article is about..."> 
   <input type="text" id="article--url" placeholder="paste URL here">

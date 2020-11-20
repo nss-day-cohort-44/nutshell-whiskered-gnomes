@@ -8,8 +8,8 @@ export const Task = (taskObj) => {
     <input type="checkbox" id="completeTask--${taskObj.id}" name="completed" value="completed" />
     <label for="completed">Select when completed</label>
     <input type="hidden" name="taskId" id="taskId">
-    <button id="editTask--${taskObj.id}">Edit</button>
-    <button id="deleteTask--${taskObj.id}">Delete</button>
+    <button class="deleteButton" id="editTask--${taskObj.id}">Edit</button>
+    <button class="deleteButton" id="deleteTask--${taskObj.id}">Delete</button>
   </div>
   `
 }

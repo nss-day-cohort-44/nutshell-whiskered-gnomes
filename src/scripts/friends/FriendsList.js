@@ -46,17 +46,18 @@ const parsedFriends = (currentUser, allRelationships, allUsers) => {
 const render = (parsedFriendsArray) => {
     if (parsedFriendsArray.length > 0) {
         friendsElement.innerHTML = `
+        <h3 class="friends_header">Friends</h3>
         <article class="friends__list">
             ${parsedFriendsArray.map(friend => friendHTML(friend)).join("")}
-            <button id="addFriend">Add Friend</button>
         </article>
+        <button id="addFriend">Add Friend</button>
     `
     } else {
         friendsElement.innerHTML = `
         <article class="friends__list">
             <p>"Wow, such empty... "</p>
-            <button id="addFriend">Add Friend</button>
         </article>
+        <button id="addFriend">Add Friend</button>
     `
     }
 }

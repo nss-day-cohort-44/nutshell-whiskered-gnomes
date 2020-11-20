@@ -7,19 +7,19 @@ export const eventHTML = (eventObj) => {
     if(eventObj.userId === parseInt(sessionStorage.getItem("activeUser"))) {
     return `
     <div id="entry--${eventObj.id}" class="event__card ${eventObj.upcomingEvent ? `upcomingEvent`: ``}">
-        <p>User: ${eventObj.user.username}</p>
+        <p class="username">${eventObj.user.username}</p>
         <p>Event: ${eventObj.eventName}</p>
         <p>Date: ${eventObj.date}</p>
         <p>Location: ${eventObj.location}</p>
-        <button id="deleteEvent--${eventObj.id}">Delete</button>
-        <button id="weatherButton">Weather</button>
+        <button class="deleteButton" id="deleteEvent--${eventObj.id}">Delete</button>
+        <button class="deleteButton" id="weatherButton">Weather</button>
     </div>
     `;
     }
     else {
         return`
     <div id="entry--${eventObj.id}" class="event__card ${eventObj.upcomingEvent ? `upcomingEvent`: ``}">
-        <p>User: ${eventObj.user.username}</p>
+        <p class="username">${eventObj.user.username}</p>
         <p>Event: ${eventObj.eventName}</p>
         <p>Date: ${eventObj.date}</p>
         <p>Location: ${eventObj.location}</p>

@@ -1,56 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+/***** Header & Fonts *****/
+
+html {
+  /* background-color: rgb(22, 22, 22); */
+  background: linear-gradient(rgb(16, 6, 3) 60%, rgb(255, 113, 62) );
+  /* font-family: 'Josefin Sans', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+
 .header {
+  display: flex;
+  height: 150px;
+  background: linear-gradient(rgb(119, 52, 27) 1%, rgb(255, 113, 62), rgb(119, 52, 27) 99%);
+  align-items: center;
+  /* border-radius: 10px; */
+  margin-top: -1%;
+  margin-left: -1%;
+  margin-right: -1%;
+}
+
+.header__image {
+  margin-left: 5%;
+  width: 200px;
+  border: black solid 4px;
+  border-radius: 40px;
+}
+
+/* .header {
   background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.gFT1znkr4Odu8gTkSLFAyQHaE_%26pid%3DApi&f=1);
   background-repeat: no-repeat;
   background-size: contain;
   width: 250px;
   height: 100px;
-}
+} */
+
+/***** Body and Large Components *****/
+
 .dashboard {
   display: flex;
   flex-wrap: wrap;
 }
+
 .containerLeft, .containerMid, .containerRight {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 }
-/* .messages {
-    border: 1px dotted gray;
-} */
-/* scroll functionality. sets static size for message container. messages populate from bottom. -KS*/
-.message__list {
-    height: 400px;
-    width: 300px;
-    overflow: auto;
-    display: flex;
-    flex-direction: column-reverse;
+
+.containerLeft, .containerRight {
+  flex: 1;
+  margin: 0% 1.5% 0% 1.5%;
 }
-.task--card, .news--card, .event__card, .message__card, .friend__card {
+
+.containerMid {
+  flex: 2;
+  margin: 0% 1.5% 0% 1.5%;
+}
+
+/***** List Compoents & List Headers *****/
+
+/* scroll functionality. sets static size for message container. messages populate from bottom. -KS*/
+
+.task_header, .news_header, .friends_header, .events_header, .message_header {
+  display: flex;
+  height: 45px;
+  /* border: rgb(16, 16, 16) solid 3px; */
+  background: linear-gradient(rgb(119, 52, 27) 1%, rgb(255, 113, 62), rgb(119, 52, 27) 99%);
+  align-items: center;
+  border-radius: 25px;
+  padding-left: 20px;
+  color: white;
+}
+
+.friends__list, .message__list, .eventsList, .taskContainer, .articleContainer {
+  /* background-color:rgb(38, 38, 38); */
+  background-color:  rgb(58, 25, 13);
+  border: rgb(255, 113, 62) solid 5px;
+  border-radius: 20px;
+}
+
+/*** Buttons ***/
+
+#add-article-button, #add-event-button {
+  background: black;
+  color: rgb(255, 132, 0);
+  margin-top: 2%;
+  width: 90%;
+  height: 30px;
+  border-radius: 15px;
+}
+
+#saveFriend {
+  background: black;
+  color: rgb(255, 132, 0);
+  border-radius: 15px;
+}
+
+#addFriend, #create-task-button, #saveMessage, #saveEvent, #saveArticle{
+  background: black;
+  color: rgb(255, 132, 0);
+  align-self: center;
+  margin-top: 2%;
+  width: 90%;
+  height: 30px;
+  border-radius: 15px;
+}
+
+#create-task-button {
+  margin-top: -2%;
+  margin-bottom: 2%;
+}
+
+
+/*** Friends  ***/
+
+.friends {
+  margin-bottom: 25px;
+  display: flex;
+  flex-flow: column
+}
+
+.friends__list {
+  padding-bottom: 1px;
+  display: flex;
+  flex-flow: column nowrap;
+  overflow: auto;
+  height: 300px;
+}
+
+
+.addFriend__form {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+#addFriend__text {
+  width: 70%;
+  margin-right: 2%;
+}
+
+/*** Articles ***/
+
+.article_instruction {
+  color: coral;
+}
+
+.articles {
+  display: flex;
+  justify-content: center;
+
+}
+
+.articleContainer {
+  height: 600px;
+  overflow: auto;
+}
+
+#articleForm {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/*** Tasks ***/
+.tasks {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.taskForm {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#taskForm--label {
+  color: coral;
+}
+
+
+/*** Events ***/
+
+.events {
+  margin-top: 25px;
+}
+
+.eventsForm {
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+  
+}
+
+#event--eventName, #event--location, #event--date {
+  align-self: center;
+  width: 100%;
+}
+
+
+
+.events {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.eventForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.eventsList {
+  border-radius: 15px;
+  height: 500px;
+  overflow: auto;
+}
+
+/*** Messages ***/
+
+.message__list {
+  height: 800px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.message__form {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+#message__field {
+  border-radius: 5px;
+  width: 100%;
+  /* width: auto; */
+}
+
+/***** Cards - Small Components *****/
+
+.message__card, .friend__card, .task--card, .news--card, .event__card {
+  /* background-color: white; */
+  /* background-color: black; */
+  display: flex;
+  flex-direction: column;
+  background-color: coral;
+  color: white;
+  border-radius: 15px;
   border: 1px solid black;
   margin: 10px;
   padding: 10px;
-  width: 250px;
+  margin-bottom: 5%;
 }
+
+.meesage__text {
+  margin-bottom: -2px;
+  margin-top: -2px;
+}
+
+.friend__buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.deleteButton {
+  align-self: flex-end;
+  background-color: transparent;
+  border: transparent;
+  
+}
+
+.deleteButton:hover {
+  color: rgb(145, 202, 255);
+}
+
+.upcomingEvent {
+  background-color: aquamarine;
+  font-weight: bold;
+  font-size: x-large;
+  color: rgb(121, 56, 33);
+}
+
+.friend__username {
+  margin-top: -6px;
+  margin-bottom: -8px;
+}
+
 /* .news--card {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
 } */
-.events, .eventForm {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-.upcomingEvent {
-  background-color: aquamarine;
-  font-weight: bold;
-  width: 350px;
-  font-size: x-large;
-}
+
 /* .taskContainer, .articleContainer {
   border: 1px solid black;
   padding: 10px;
 } */
+
 /* .friend__card {
   border: 1px solid black;
   width: 150px;

@@ -9,6 +9,7 @@ import { messageHTML } from "./MessageHTML.js"
 // define eventHub and contentTarget
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".message__list")
+const headerElement = document.querySelector(".message_header")
 
 // should the variables needed be modular in scope?
 let messages = []
@@ -37,6 +38,7 @@ const renderMessages = () => {
     contentTarget.innerHTML = `
     ${messagesHTMLrepresentations}
     `
+    headerElement.innerHTML = `Chat`
 }
 }
 

@@ -7,6 +7,7 @@ const eventHub = document.querySelector(".container")
 export const renderTaskButton = () => {
 
   contentTarget.innerHTML = `
+    <h3 class="task_header">Tasks</h3>
     <button id="create-task-button">Add Task</button>
     `
 }
