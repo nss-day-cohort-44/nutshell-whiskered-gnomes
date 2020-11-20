@@ -11,13 +11,23 @@ and returns an html representation of that object, showing username and message.
 - stretch: is there a way to put an active user class on messages by the active user so they can be styled separately?
  */
  export const messageHTML = messageObj => {
-     return `
+    if(messageObj.userId === parseInt(sessionStorage.getItem("activeUser"))) { 
+    return `
      <div class="message__card">
         <p class="meesage__text"><a href="#" id="addMessageFriend--${messageObj.user.username}">${messageObj.user.username}</a><br>${messageObj.message}</p>
         <button class="deleteButton" id="deleteMessage--${messageObj.id}">delete</button>
      </div>
      `
- }
+    }
+    else {
+    return ` 
+        <div class="message__card">
+        <p class="meesage__text"><a href="#" id="addMessageFriend--${messageObj.user.username}">${messageObj.user.username}</a><br>${messageObj.message}</p>
+     </div>
+     `
+    }
+}    
+
 /* listens for click of username on message cards
 when clicked, alert window appears asking if the active user wants to add chosen user to friends
 if okay clicked, chosen user's name is sent as a detail along with "addSavedFriend" in dispatch event*/
