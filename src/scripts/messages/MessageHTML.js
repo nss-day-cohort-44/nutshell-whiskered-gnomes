@@ -13,7 +13,7 @@ and returns an html representation of that object, showing username and message.
  export const messageHTML = messageObj => {
      return `
      <div class="message__card">
-        <p><a href="#" id="addFriend--${messageObj.user.username}">${messageObj.user.username}</a>: ${messageObj.message}</p>
+        <p><a href="#" id="addMessageFriend--${messageObj.user.username}">${messageObj.user.username}</a>: ${messageObj.message}</p>
         <button id="deleteMessage--${messageObj.id}">delete</button>
      </div>
      `
@@ -25,7 +25,7 @@ const eventHub = document.querySelector(".container")
 
  // Dispatches userId from input form
 eventHub.addEventListener("click", event => {
-    if (event.target.id.startsWith("addFriend")) {
+    if (event.target.id.startsWith("addMessageFriend")) {
         // debugger
         const [prefix, friendName] = event.target.id.split("--")
 
