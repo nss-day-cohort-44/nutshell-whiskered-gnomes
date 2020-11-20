@@ -11,7 +11,7 @@ export const friendHTML = friendObj => {
         <div class="friend__card" id=${friendObj.id}>
             <p class="friend__username">${friendObj.username}</p>
             <div class="friend__buttons">
-            <button id="deleteFriend--${friendObj.id}">Remove</button>
+            <button class="deleteButton" id="deleteFriend--${friendObj.id}">Remove</button>
             </div>
         </div>
     `

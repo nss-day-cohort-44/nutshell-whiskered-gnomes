@@ -6,6 +6,7 @@ import { Article } from "./articleHTML.js"
 
 const eventHub = document.querySelector(".container")
 const contentTarget = document.querySelector(".articlesList")
+const headerElement = document.querySelector(".news_header")
 
  //article list has been modified, update it, this event was created in provider, along with the save function
 eventHub.addEventListener("articleStateChanged", () => { ArticleListComponent() })
@@ -32,10 +33,10 @@ const render = (articlesArray) => {
   contentTarget.innerHTML = 
   `
   <div class="articleContainer">
-  <h3>Article List</h3>
   ${articlesHTML}
   </div>
   `
+  headerElement.innerHTML = `News`
  
 }
 

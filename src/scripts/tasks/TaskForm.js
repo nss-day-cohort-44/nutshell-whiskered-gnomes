@@ -18,7 +18,7 @@ export const renderTaskForm = () => {
   taskContainer.innerHTML = `
   <form class="taskForm">
   <input id="taskForm--title" type="text" placeholder="Task Name" required/>
-  <label for="taskForm--date">Completion date:</label>
+  <label id="taskForm--label" for="taskForm--date">Completion date:</label>
   <input id="taskForm--date" type="date" required/>
   <button id="saveTask" type="button">Save task</button>
   </form>

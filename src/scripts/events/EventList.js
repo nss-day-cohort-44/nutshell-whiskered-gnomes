@@ -5,6 +5,7 @@ import { eventHTML } from "./EventHTML.js";
 
 const eventHub = document.querySelector(".container");
 const eventsContainer = document.querySelector(".eventsList");
+const headerElement = document.querySelector(".events_header")
 
 export const EventList = () => {
     getEvents()
@@ -23,10 +24,10 @@ const render = (eventsArray) => {
     }
     eventsContainer.innerHTML = `
         <div class="Events__Aside">
-        <h3 class="events__header">Events</h3>
         ${eventsHTMLRepresentation}
         </div>               
         `;
+    headerElement.innerHTML = `Events`
 }
 
 eventHub.addEventListener("click", (clickEvent) => {
