@@ -40,7 +40,7 @@ For this project we used:Vanilla JavaScript, External APIs, Github, CSS/Flexbox,
 * User can message a friend publicly or privately
 
 # Planning Links
-1. [ERD]()
+1. [ERD](https://github.com/nss-day-cohort-44/nutshell-whiskered-gnomes/blob/master/src/planning/nutshellERD.png)
 1. [Wireframe]()
 
 # Contributors
