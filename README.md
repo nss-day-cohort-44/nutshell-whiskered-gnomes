@@ -41,7 +41,7 @@ For this project we used:Vanilla JavaScript, External APIs, Github, CSS/Flexbox,
 
 # Planning Links
 1. [ERD](https://github.com/nss-day-cohort-44/nutshell-whiskered-gnomes/blob/master/src/planning/nutshellERD.png)
-1. [Wireframe]()
+1. [Wireframe](https://github.com/nss-day-cohort-44/nutshell-whiskered-gnomes/blob/master/src/planning/wireframe-whiskered-gnomes-nutshell.svg)
 
 # Contributors
 [Kristen Steele](https://github.com/krsteele)   
