@@ -1,6 +1,6 @@
 # Nutshell
 Application Overview:
-In a 6 day agile-scrum sprint, my team created "Nutshell", a social media style dashboard for a user to organize daily tasks, events, news article, friends, and chat messages.
+In a 6 day agile-scrum sprint, our team created "Nutshell", a social media style dashboard for a user to organize daily tasks, events, news article, friends, and chat messages.
   
 
 # To run this app, follow these instructions:
